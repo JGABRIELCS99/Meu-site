@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
                 {/* Main Image */}
                 <img 
                   src={IMAGES.HERO_PORTRAIT} 
-                  alt="Dr. Gabriel Costa" 
+                  alt="Dr. Gabriel Costa, advogado previdenciarista e trabalhista em Camamu, Ituberá e Itacaré, Bahia" 
                   className="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px] shadow-2xl relative z-10"
                 />
                 

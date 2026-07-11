@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
           <div>
             <div className="mb-8 flex flex-col items-center text-center">
                <div className="w-16 h-16 mb-4">
-                <img src={IMAGES.LOGO} alt="Logo Gabriel Costa" className="w-full h-full object-contain" />
+                <img src={IMAGES.LOGO} alt="Logo de Gabriel Costa, Advogado Previdenciário e Trabalhista em Camamu, Bahia" className="w-full h-full object-contain" />
               </div>
               <h2 className="font-serif text-3xl font-bold mb-2">Entre em Contato</h2>
               <p className="text-gray-400">Atendimento presencial e online para todo o Brasil.</p>

@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         {/* Brand */}
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollTo('hero')}>
           <div className="w-12 h-12">
-            <img src={IMAGES.LOGO} alt="Logo Gabriel Costa" className="w-full h-full object-contain" />
+            <img src={IMAGES.LOGO} alt="Logo do escritório de advocacia Gabriel Costa Advogado" className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col">
             <span className={`font-serif font-bold leading-none tracking-wide text-lg ${isScrolled ? 'text-cream-50' : 'text-forest-900 md:text-forest-900 lg:text-forest-900'}`}>
@@ -42,8 +42,8 @@ const Header: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {['Áreas de Atuação', 'Sobre Mim', 'Perguntas', 'Contato'].map((item, idx) => {
-            const ids = ['services', 'about', 'faq', 'contact'];
+          {['Áreas de Atuação', 'Sobre Mim', 'Onde Atendo', 'Perguntas', 'Contato'].map((item, idx) => {
+            const ids = ['services', 'about', 'coverage', 'faq', 'contact'];
             return (
               <button 
                 key={item} 
@@ -76,8 +76,8 @@ const Header: React.FC = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-forest-900 p-6 md:hidden shadow-xl border-t border-forest-800 flex flex-col gap-4">
-          {['Áreas de Atuação', 'Sobre Mim', 'Perguntas', 'Contato'].map((item, idx) => {
-            const ids = ['services', 'about', 'faq', 'contact'];
+          {['Áreas de Atuação', 'Sobre Mim', 'Onde Atendo', 'Perguntas', 'Contato'].map((item, idx) => {
+            const ids = ['services', 'about', 'coverage', 'faq', 'contact'];
             return (
               <button 
                 key={item} 
