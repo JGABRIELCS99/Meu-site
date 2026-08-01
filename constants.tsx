@@ -64,7 +64,7 @@ export const SERVICES: ServiceArea[] = [
   },
   {
     id: 'previdenciario',
-    title: 'Direito Previdenciário',
+    title: 'Direito Previdenciário (INSS)',
     description: 'Planejamento e atuação para garantir o melhor benefício no INSS.',
     icon: <Scale className="w-8 h-8 text-gold-500" />,
     articles: [

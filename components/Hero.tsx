@@ -20,8 +20,8 @@ const Hero: React.FC = () => {
               <span className="text-gold-600 text-xs font-bold tracking-widest uppercase">Advocacia Especializada</span>
             </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-forest-900 leading-tight mb-6 uppercase">
-              Direito <span className="text-gold-500">Trabalhista</span>, <br />
-              Previdenciário e Cível
+              Direito Trabalhista, <br />
+              Previdenciário (INSS) e Cível
             </h1>
             <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
               Atuação especializada para garantir o que é seu por direito.
