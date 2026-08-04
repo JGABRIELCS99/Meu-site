@@ -115,9 +115,16 @@ const About: React.FC = () => {
                       </div>
                       <h4 className="font-serif text-lg font-bold text-gold-400">História</h4>
                     </div>
-                    <p className="text-sm text-cream-100 leading-relaxed">
-                      Aprovado em dois concursos federais para a justiça do trabalho em 2025.
-                    </p>
+                    <ul className="space-y-2.5 text-sm text-cream-100 leading-relaxed">
+                      <li className="flex gap-2 items-start">
+                        <span className="w-1.5 h-1.5 bg-gold-400 rounded-full mt-2 shrink-0"></span>
+                        <span>Aprovado em dois concursos federais para a Justiça do Trabalho em 2025.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="w-1.5 h-1.5 bg-gold-400 rounded-full mt-2 shrink-0"></span>
+                        <span>Atuação com registro de marcas desde 2022.</span>
+                      </li>
+                    </ul>
                   </div>
 
                   {/* Valores Card */}

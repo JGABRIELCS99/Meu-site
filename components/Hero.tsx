@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { CONTACT_DATA, IMAGES } from '../constants';
 
 const Hero: React.FC = () => {
+  const [activeWordIndex, setActiveWordIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveWordIndex((prev) => (prev + 1) % 3);
+    }, 2200);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 bg-cream-50">
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 bg-cream-50 overflow-hidden">
       {/* Decorative Background Wrapper - Handles overflow for the clip-path so the main section doesn't clip the card */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
          {/* Decorative Background Element */}
@@ -14,15 +23,50 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           
-          {/* Text Content - Added max-width and padding to prevent overlap with green background */}
+          {/* Text Content */}
           <div className="flex-1 text-center lg:text-left mt-10 lg:mt-0 lg:max-w-2xl lg:pr-8">
-            <div className="inline-block mb-4 px-3 py-1 border border-gold-500 rounded-full">
+            <div className="inline-block mb-4 px-3 py-1 border border-gold-500 rounded-full bg-white/40 backdrop-blur-sm shadow-sm">
               <span className="text-gold-600 text-xs font-bold tracking-widest uppercase">Advocacia Especializada</span>
             </div>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-forest-900 leading-tight mb-6 uppercase">
-              Direito Trabalhista, <br />
-              Previdenciário (INSS) e Cível
+            
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-forest-900 leading-tight mb-6 uppercase tracking-tight">
+              Direito{' '}
+              <span
+                onClick={() => setActiveWordIndex(0)}
+                title="Clique para destacar"
+                className={`cursor-pointer transition-all duration-500 inline-block px-1 rounded-md ${
+                  activeWordIndex === 0
+                    ? 'text-metallic-gold font-extrabold scale-[1.03]'
+                    : 'text-forest-900 opacity-80 hover:opacity-100 hover:text-gold-600'
+                }`}
+              >
+                Trabalhista
+              </span>
+              , <br className="hidden sm:inline" />
+              <span
+                onClick={() => setActiveWordIndex(1)}
+                title="Clique para destacar"
+                className={`cursor-pointer transition-all duration-500 inline-block px-1 rounded-md ${
+                  activeWordIndex === 1
+                    ? 'text-metallic-gold font-extrabold scale-[1.03]'
+                    : 'text-forest-900 opacity-80 hover:opacity-100 hover:text-gold-600'
+                }`}
+              >
+                Previdenciário (INSS)
+              </span>{' '}
+              <span
+                onClick={() => setActiveWordIndex(2)}
+                title="Clique para destacar"
+                className={`cursor-pointer transition-all duration-500 inline-block px-1 rounded-md ${
+                  activeWordIndex === 2
+                    ? 'text-metallic-gold font-extrabold scale-[1.03]'
+                    : 'text-forest-900 opacity-80 hover:opacity-100 hover:text-gold-600'
+                }`}
+              >
+                e Cível
+              </span>
             </h1>
+
             <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
               Atuação especializada para garantir o que é seu por direito.
             </p>
@@ -32,7 +76,7 @@ const Hero: React.FC = () => {
                 href={CONTACT_DATA.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group bg-forest-900 text-white px-8 py-4 rounded-tl-3xl rounded-br-3xl hover:bg-forest-800 transition-all shadow-lg flex items-center justify-center gap-3"
+                className="group bg-forest-900 text-white px-8 py-4 rounded-tl-3xl rounded-br-3xl hover:bg-forest-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3 hover:-translate-y-0.5"
               >
                 Fale Comigo
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -53,7 +97,7 @@ const Hero: React.FC = () => {
                   className="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px] shadow-2xl relative z-10"
                 />
                 
-                {/* Floating Card Badge - Z-index higher to stay on top of next section */}
+                {/* Floating Card Badge */}
                 <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl z-30 max-w-[240px] border-l-4 border-gold-500">
                   <p className="text-forest-900 font-serif font-bold text-lg">Gabriel Costa</p>
                   <div className="mt-1 flex flex-col items-start">
@@ -62,7 +106,7 @@ const Hero: React.FC = () => {
                       href="https://cna.oab.org.br/" 
                       target="_blank" 
                       rel="noreferrer"
-                      className="flex items-center gap-1 text-[10px] text-gold-600 hover:text-gold-500 underline mt-1"
+                      className="flex items-center gap-1 text-[10px] text-gold-600 hover:text-gold-500 underline mt-1 font-medium"
                     >
                       Consultar no CNA <ExternalLink size={10} />
                     </a>

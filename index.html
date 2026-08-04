@@ -130,6 +130,31 @@
       .clip-curve-top {
         clip-path: ellipse(150% 100% at 50% 0%);
       }
+      @keyframes metallicGoldShimmer {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+      .text-metallic-gold {
+        background: linear-gradient(
+          110deg,
+          #8A6B29 0%,
+          #C5A059 15%,
+          #FFF4B8 30%,
+          #E6CA65 45%,
+          #FFFFFF 50%,
+          #E6CA65 55%,
+          #C5A059 70%,
+          #8A6B29 100%
+        );
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: metallicGoldShimmer 2.2s linear infinite;
+      }
     </style>
   <script type="importmap">
 {
