@@ -6,7 +6,7 @@ import { FaqItem } from '../types';
 const FAQ: React.FC = () => {
   // We use a string key like 'tab-index' to track open items across different lists uniquely
   // Format: 'category-index', e.g., 'trab-0'
-  const [openId, setOpenId] = useState<string | null>('trab-0');
+  const [openId, setOpenId] = useState<string | null>(null);
 
   const toggleFaq = (id: string) => {
     setOpenId(openId === id ? null : id);
@@ -57,7 +57,7 @@ const FAQ: React.FC = () => {
   );
 
   return (
-    <section id="faq" className="pt-24 pb-10 bg-cream-50">
+    <section id="faq" className="pt-6 pb-16 bg-cream-50">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-forest-900 mb-4">Dúvidas Frequentes</h2>

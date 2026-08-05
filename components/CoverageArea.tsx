@@ -15,7 +15,7 @@ const CoverageArea: React.FC = () => {
   ];
 
   return (
-    <section id="coverage" className="py-24 bg-cream-50 relative overflow-hidden">
+    <section id="coverage" className="pt-20 pb-10 bg-cream-50 relative overflow-hidden">
       {/* Decorative background gradients */}
       <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-gold-500/5 blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-forest-900/5 blur-3xl pointer-events-none"></div>

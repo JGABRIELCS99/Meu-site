@@ -42,8 +42,8 @@ const Header: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {['Áreas de Atuação', 'Sobre Mim', 'Onde Atendo', 'Perguntas', 'Contato'].map((item, idx) => {
-            const ids = ['services', 'about', 'coverage', 'faq', 'contact'];
+          {['Sobre Mim', 'Áreas de Atuação', 'Onde Atendo', 'Perguntas', 'Contato'].map((item, idx) => {
+            const ids = ['about', 'services', 'coverage', 'faq', 'contact'];
             return (
               <button 
                 key={item} 
@@ -76,8 +76,8 @@ const Header: React.FC = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-forest-900 p-6 md:hidden shadow-xl border-t border-forest-800 flex flex-col gap-4">
-          {['Áreas de Atuação', 'Sobre Mim', 'Onde Atendo', 'Perguntas', 'Contato'].map((item, idx) => {
-            const ids = ['services', 'about', 'coverage', 'faq', 'contact'];
+          {['Sobre Mim', 'Áreas de Atuação', 'Onde Atendo', 'Perguntas', 'Contato'].map((item, idx) => {
+            const ids = ['about', 'services', 'coverage', 'faq', 'contact'];
             return (
               <button 
                 key={item} 

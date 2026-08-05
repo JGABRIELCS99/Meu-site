@@ -34,10 +34,10 @@ const Hero: React.FC = () => {
               <span
                 onClick={() => setActiveWordIndex(0)}
                 title="Clique para destacar"
-                className={`cursor-pointer transition-all duration-500 inline-block px-1 rounded-md ${
+                className={`cursor-pointer transition-transform duration-300 inline-block px-1 rounded-md ${
                   activeWordIndex === 0
                     ? 'text-metallic-gold font-extrabold scale-[1.03]'
-                    : 'text-forest-900 opacity-80 hover:opacity-100 hover:text-gold-600'
+                    : 'text-title-inactive opacity-85 hover:opacity-100'
                 }`}
               >
                 Trabalhista
@@ -46,10 +46,10 @@ const Hero: React.FC = () => {
               <span
                 onClick={() => setActiveWordIndex(1)}
                 title="Clique para destacar"
-                className={`cursor-pointer transition-all duration-500 inline-block px-1 rounded-md ${
+                className={`cursor-pointer transition-transform duration-300 inline-block px-1 rounded-md ${
                   activeWordIndex === 1
                     ? 'text-metallic-gold font-extrabold scale-[1.03]'
-                    : 'text-forest-900 opacity-80 hover:opacity-100 hover:text-gold-600'
+                    : 'text-title-inactive opacity-85 hover:opacity-100'
                 }`}
               >
                 Previdenciário (INSS)
@@ -57,10 +57,10 @@ const Hero: React.FC = () => {
               <span
                 onClick={() => setActiveWordIndex(2)}
                 title="Clique para destacar"
-                className={`cursor-pointer transition-all duration-500 inline-block px-1 rounded-md ${
+                className={`cursor-pointer transition-transform duration-300 inline-block px-1 rounded-md ${
                   activeWordIndex === 2
                     ? 'text-metallic-gold font-extrabold scale-[1.03]'
-                    : 'text-forest-900 opacity-80 hover:opacity-100 hover:text-gold-600'
+                    : 'text-title-inactive opacity-85 hover:opacity-100'
                 }`}
               >
                 e Cível
