@@ -25,6 +25,7 @@ export const CONTACT_DATA: ContactInfo = {
   phone: "(73) 98205-2016", // Número corrigido
   address: "Avenida Beira Mar, Nº 45, Escritório, Camamu-BA",
   whatsappUrl: "https://wa.me/5573982052016", // Link corrigido para o novo número
+  instagramUrl: "https://www.instagram.com/gabrielcostaadvogado/",
   // Mapa atualizado para busca direta do endereço
   googleMapsEmbedUrl: "https://maps.google.com/maps?q=Avenida+Beira+Mar,+45,+Camamu-BA&t=&z=15&ie=UTF8&iwloc=&output=embed" 
 };

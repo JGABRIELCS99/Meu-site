@@ -55,30 +55,32 @@ const Header: React.FC = () => {
             );
           })}
 
-          {/* Instagram Button */}
-          <a
-            href="https://www.instagram.com/gabrielcostaadvogado/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram do Dr. Gabriel Costa"
-            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-semibold transition-all cursor-pointer shadow-sm hover:scale-105 ${
-              isScrolled
-                ? 'border-gold-500/50 text-gold-400 hover:bg-gold-500/20'
-                : 'border-forest-900/30 text-forest-900 hover:border-gold-500 hover:text-gold-600 bg-white/70 backdrop-blur-xs hover:bg-white'
-            }`}
-          >
-            <Instagram size={15} className="text-gold-500 shrink-0" />
-            <span>Instagram</span>
-          </a>
+          {/* Action Buttons: Instagram & Fale Comigo */}
+          <div className="flex items-center gap-3">
+            <a
+              href={CONTACT_DATA.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram do Dr. Gabriel Costa"
+              className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-tl-2xl rounded-br-2xl border text-xs font-semibold transition-all cursor-pointer shadow-sm hover:scale-105 ${
+                isScrolled
+                  ? 'border-gold-500/60 text-gold-300 hover:bg-gold-500/20'
+                  : 'border-forest-900/30 text-forest-900 hover:border-gold-500 hover:text-gold-600 bg-white/80 backdrop-blur-xs hover:bg-white'
+              }`}
+            >
+              <Instagram size={15} className="text-gold-500 shrink-0" />
+              <span>Instagram</span>
+            </a>
 
-          <a 
-            href={CONTACT_DATA.whatsappUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="bg-gold-500 hover:bg-gold-600 text-white px-5 py-2 rounded-tl-2xl rounded-br-2xl transition-all transform hover:-translate-y-0.5 shadow-md font-medium text-sm"
-          >
-            Fale Comigo
-          </a>
+            <a 
+              href={CONTACT_DATA.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-gold-500 hover:bg-gold-600 text-white px-5 py-2 rounded-tl-2xl rounded-br-2xl transition-all transform hover:-translate-y-0.5 shadow-md font-medium text-sm flex items-center justify-center"
+            >
+              Fale Comigo
+            </a>
+          </div>
         </div>
 
         {/* Mobile Toggle */}
@@ -106,23 +108,27 @@ const Header: React.FC = () => {
             );
           })}
           
-          {/* Instagram in Mobile */}
-          <a
-            href="https://www.instagram.com/gabrielcostaadvogado/"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-2 text-cream-100 hover:text-gold-400 py-2 border-b border-forest-800 text-sm font-medium"
-          >
-            <Instagram size={18} className="text-gold-400" />
-            Instagram: @gabrielcostaadvogado
-          </a>
+          {/* Action Buttons in Mobile: Instagram + Fale Comigo */}
+          <div className="flex flex-col gap-2.5 mt-2">
+            <a
+              href={CONTACT_DATA.instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 border border-gold-500/60 text-gold-300 hover:bg-gold-500/20 py-2.5 rounded-tl-2xl rounded-br-2xl text-sm font-semibold transition-colors"
+            >
+              <Instagram size={18} className="text-gold-400" />
+              <span>Instagram: @gabrielcostaadvogado</span>
+            </a>
 
-          <a 
-            href={CONTACT_DATA.whatsappUrl}
-            className="bg-gold-500 text-center text-white py-3 rounded-xl mt-2 font-medium"
-          >
-            Fale Comigo
-          </a>
+            <a 
+              href={CONTACT_DATA.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-gold-500 hover:bg-gold-600 text-center text-white py-3 rounded-tl-2xl rounded-br-2xl font-medium shadow-md transition-all"
+            >
+              Fale Comigo
+            </a>
+          </div>
         </div>
       )}
     </nav>

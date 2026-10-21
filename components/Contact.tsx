@@ -98,8 +98,16 @@ const Contact: React.FC = () => {
             © {new Date().getFullYear()} Gabriel Costa Advocacia. Todos os direitos reservados.
           </p>
           <div className="flex gap-4">
-             <a href="#" className="text-gray-400 hover:text-gold-500 transition-colors"><Instagram size={20} /></a>
-             <a href="#" className="text-gray-400 hover:text-gold-500 transition-colors"><Linkedin size={20} /></a>
+             <a 
+               href={CONTACT_DATA.instagramUrl} 
+               target="_blank" 
+               rel="noreferrer" 
+               aria-label="Instagram do Dr. Gabriel Costa" 
+               className="text-gray-400 hover:text-gold-500 transition-colors"
+             >
+               <Instagram size={20} />
+             </a>
+             <a href="#hero" className="text-gray-400 hover:text-gold-500 transition-colors" title="Voltar ao início"><Linkedin size={20} /></a>
           </div>
         </div>
       </div>

@@ -24,5 +24,6 @@ export interface ContactInfo {
   phone: string;
   address: string;
   whatsappUrl: string;
+  instagramUrl: string;
   googleMapsEmbedUrl: string;
 }
