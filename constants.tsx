@@ -9,17 +9,14 @@ import { ContactInfo, FaqItem, ServiceArea } from './types';
 
 export const IMAGES = {
   // LOGO: Link para a imagem da sua logomarca
-  // Link atualizado para o ícone da marca
   LOGO: "https://lh3.googleusercontent.com/d/1p3Ff_i9V9KoWPiwUgEDamIq6U4IZhBin", 
 
   // FOTO 1 (PRINCIPAL): Foto de destaque que aparece no topo do site.
-  // Sugestão: Foto de braços cruzados ou perfil profissional elegante.
-  // Nota: Link atualizado para formato direto lh3. Certifique-se que o arquivo está Público no Drive.
   HERO_PORTRAIT: "https://lh3.googleusercontent.com/d/1QYeSTARApJLgWtkSthwdTSYFvAatAK7k", 
 
   // FOTO 2 (SOBRE MIM): Foto que aparece na seção "Sobre Gabriel Costa".
-  // Sugestão: Uma foto diferente da principal, talvez sorrindo ou em ação.
-  ABOUT_PORTRAIT: "https://lh3.googleusercontent.com/d/1xtI5W0RuD2xyhlKLcmXQlFO2Bd1NaSzt", 
+  // Atualizada para a nova foto oficial enviada pelo cliente.
+  ABOUT_PORTRAIT: "/assets/aistudio/image_10719998.png", 
 };
 
 // --- DADOS DE CONTATO ---
@@ -32,33 +29,33 @@ export const CONTACT_DATA: ContactInfo = {
   googleMapsEmbedUrl: "https://maps.google.com/maps?q=Avenida+Beira+Mar,+45,+Camamu-BA&t=&z=15&ie=UTF8&iwloc=&output=embed" 
 };
 
-// --- SERVIÇOS E ARTIGOS ---
+// --- SERVIÇOS E ARTIGOS (ORDEM: CIVIL, PREVIDENCIÁRIO, TRABALHISTA, MARCAS) ---
 export const SERVICES: ServiceArea[] = [
   {
-    id: 'trabalhista',
-    title: 'Direito Trabalhista',
-    description: 'Defesa intransigente dos seus direitos nas relações de trabalho.',
-    icon: <Briefcase className="w-8 h-8 text-gold-500" />,
+    id: 'civil',
+    title: 'Direito Civil',
+    description: 'Soluções jurídicas preventivas e contenciosas para proteger você e seus bens.',
+    icon: <HeartHandshake className="w-8 h-8 text-gold-500" />,
     articles: [
       {
-        id: 'rescisao-indireta',
-        title: 'Rescisão Indireta',
-        summary: 'Entenda quando o empregador comete falta grave e você pode sair do emprego recebendo todos os seus direitos, como se tivesse sido demitido.'
+        id: 'contratos',
+        title: 'Elaboração e Análise de Contratos',
+        summary: 'Proteja seus negócios com contratos sólidos e bem estruturados. Evite prejuízos e discussões judiciais futuras com uma assessoria preventiva.'
       },
       {
-        id: 'calculos',
-        title: 'Cálculos Rescisórios',
-        summary: 'Verifique se o valor pago na sua demissão está correto. Erros comuns podem custar caro ao trabalhador.'
+        id: 'familia-sucessoes',
+        title: 'Família e Sucessões',
+        summary: 'Atuação sensível e técnica em divórcios, partilhas de bens, pensão alimentícia, inventários e planejamento sucessório para preservar o patrimônio familiar.'
       },
       {
-        id: 'acordo',
-        title: 'Acordo Rescisório',
-        summary: 'Saiba como funciona a demissão por acordo mútuo e quais verbas você tem direito a receber.'
+        id: 'indenizacoes',
+        title: 'Indenizações e Responsabilidade Civil',
+        summary: 'Busca pela reparação justa de danos morais e materiais causados por acidentes, ofensas, cobranças indevidas ou descumprimento de deveres.'
       },
       {
-        id: 'direitos',
-        title: 'Reclamação de Direitos',
-        summary: 'Horas extras, adicional noturno, insalubridade e periculosidade. Não deixe seus direitos prescreverem.'
+        id: 'consumidor',
+        title: 'Direito do Consumidor',
+        summary: 'Defesa contra abusos de grandes empresas, como bancos, operadoras de telefonia, planos de saúde e companhias aéreas.'
       }
     ]
   },
@@ -91,30 +88,30 @@ export const SERVICES: ServiceArea[] = [
     ]
   },
   {
-    id: 'civil',
-    title: 'Direito Civil',
-    description: 'Soluções jurídicas preventivas e contenciosas para proteger você e seus bens.',
-    icon: <HeartHandshake className="w-8 h-8 text-gold-500" />,
+    id: 'trabalhista',
+    title: 'Direito Trabalhista',
+    description: 'Defesa intransigente dos seus direitos nas relações de trabalho.',
+    icon: <Briefcase className="w-8 h-8 text-gold-500" />,
     articles: [
       {
-        id: 'contratos',
-        title: 'Elaboração e Análise de Contratos',
-        summary: 'Proteja seus negócios com contratos sólidos e bem estruturados. Evite prejuízos e discussões judiciais futuras com uma assessoria preventiva.'
+        id: 'rescisao-indireta',
+        title: 'Rescisão Indireta',
+        summary: 'Entenda quando o empregador comete falta grave e você pode sair do emprego recebendo todos os seus direitos, como se tivesse sido demitido.'
       },
       {
-        id: 'familia-sucessoes',
-        title: 'Família e Sucessões',
-        summary: 'Atuação sensível e técnica em divórcios, partilhas de bens, pensão alimentícia, inventários e planejamento sucessório para preservar o patrimônio familiar.'
+        id: 'calculos',
+        title: 'Cálculos Rescisórios',
+        summary: 'Verifique se o valor pago na sua demissão está correto. Erros comuns podem custar caro ao trabalhador.'
       },
       {
-        id: 'indenizacoes',
-        title: 'Indenizações e Responsabilidade Civil',
-        summary: 'Busca pela reparação justa de danos morais e materiais causados por acidentes, ofensas, cobranças indevidas ou descumprimento de deveres.'
+        id: 'acordo',
+        title: 'Acordo Rescisório',
+        summary: 'Saiba como funciona a demissão por acordo mútuo e quais verbas você tem direito a receber.'
       },
       {
-        id: 'consumidor',
-        title: 'Direito do Consumidor',
-        summary: 'Defesa contra abusos de grandes empresas, como bancos, operadoras de telefonia, planos de saúde e companhias aéreas.'
+        id: 'direitos',
+        title: 'Reclamação de Direitos',
+        summary: 'Horas extras, adicional noturno, insalubridade e periculosidade. Não deixe seus direitos prescreverem.'
       }
     ]
   },

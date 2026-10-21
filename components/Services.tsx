@@ -48,7 +48,7 @@ const Services: React.FC = () => {
   // 2. Render Themes Page for a Specific Selected Area
   if (activeService) {
     return (
-      <section id="services" className="py-24 bg-white relative">
+      <section id="services" className="pt-10 pb-12 md:pt-12 md:pb-14 bg-white relative">
         <div className="container mx-auto px-6">
           
           {/* Back Button & Quick Area Switch Bar */}
@@ -166,9 +166,9 @@ const Services: React.FC = () => {
 
   // 3. Render Main View with 1 Card for Each Area
   return (
-    <section id="services" className="py-24 bg-white relative">
+    <section id="services" className="pt-10 pb-12 md:pt-12 md:pb-14 bg-white relative">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <span className="text-gold-600 text-xs font-bold tracking-widest uppercase bg-gold-50 border border-gold-100 px-4 py-1.5 rounded-full inline-block mb-3">
             Especialidades Jurídicas
           </span>
@@ -181,8 +181,8 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        {/* 3 Area Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* 4 Area Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {SERVICES.map((service) => (
             <div
               key={service.id}

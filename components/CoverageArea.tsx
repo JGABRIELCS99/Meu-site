@@ -15,13 +15,13 @@ const CoverageArea: React.FC = () => {
   ];
 
   return (
-    <section id="coverage" className="pt-20 pb-10 bg-cream-50 relative overflow-hidden">
+    <section id="coverage" className="pt-10 pb-10 md:pt-12 bg-cream-50 relative overflow-hidden">
       {/* Decorative background gradients */}
       <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-gold-500/5 blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-forest-900/5 blur-3xl pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <span className="text-gold-600 text-xs font-bold tracking-widest uppercase bg-gold-50 border border-gold-200 px-4 py-1.5 rounded-full">
             Região de Atuação
           </span>
@@ -30,20 +30,8 @@ const CoverageArea: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-gold-500 mx-auto rounded-full mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            Oferecemos suporte jurídico de alta performance com a agilidade que você merece. Realizamos atendimento presencial em nosso escritório físico e atendimento online por videochamadas e WhatsApp para todo o Brasil.
+            Realizamos atendimento presencial em nosso escritório físico e atendimento online por videochamadas e WhatsApp para todo o Brasil.
           </p>
-        </div>
-
-        {/* Natural SEO-optimized phrase box */}
-        <div className="max-w-4xl mx-auto bg-white border border-gold-100 rounded-3xl p-8 md:p-10 shadow-sm text-center mb-12">
-          <p className="text-forest-900 text-lg md:text-xl font-medium leading-relaxed font-sans">
-            "Atendimento presencial e online em <strong className="text-gold-600 font-semibold">Camamu</strong>, <strong className="text-gold-600 font-semibold">Ituberá</strong>, <strong className="text-gold-600 font-semibold">Barra Grande</strong>, <strong className="text-gold-600 font-semibold">Maraú</strong>, <strong className="text-gold-600 font-semibold">Itacaré</strong>, <strong className="text-gold-600 font-semibold">Travessão</strong>, <strong className="text-gold-600 font-semibold">Taperoá</strong>, <strong className="text-gold-600 font-semibold">Taipu de Fora</strong> e toda a região do <strong className="text-gold-600 font-semibold">Baixo Sul da Bahia</strong>."
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-gray-500 font-semibold uppercase tracking-wider">
-            <span className="flex items-center gap-1.5"><CheckCircle className="text-gold-500 w-4.5 h-4.5" /> Advocacia Digital</span>
-            <span className="flex items-center gap-1.5"><CheckCircle className="text-gold-500 w-4.5 h-4.5" /> Segurança Jurídica</span>
-            <span className="flex items-center gap-1.5"><CheckCircle className="text-gold-500 w-4.5 h-4.5" /> Atendimento Humanizado</span>
-          </div>
         </div>
 
         {/* Bento Grid of Cities */}

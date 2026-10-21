@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import { CONTACT_DATA, IMAGES } from '../constants';
 
 const Header: React.FC = () => {
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {['Sobre Mim', 'Áreas de Atuação', 'Onde Atendo', 'Perguntas', 'Contato'].map((item, idx) => {
             const ids = ['about', 'services', 'coverage', 'faq', 'contact'];
             return (
@@ -54,11 +54,28 @@ const Header: React.FC = () => {
               </button>
             );
           })}
+
+          {/* Instagram Button */}
+          <a
+            href="https://www.instagram.com/gabrielcostaadvogado/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram do Dr. Gabriel Costa"
+            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-semibold transition-all cursor-pointer shadow-sm hover:scale-105 ${
+              isScrolled
+                ? 'border-gold-500/50 text-gold-400 hover:bg-gold-500/20'
+                : 'border-forest-900/30 text-forest-900 hover:border-gold-500 hover:text-gold-600 bg-white/70 backdrop-blur-xs hover:bg-white'
+            }`}
+          >
+            <Instagram size={15} className="text-gold-500 shrink-0" />
+            <span>Instagram</span>
+          </a>
+
           <a 
             href={CONTACT_DATA.whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="bg-gold-500 hover:bg-gold-600 text-white px-6 py-2 rounded-tl-2xl rounded-br-2xl transition-all transform hover:-translate-y-1 shadow-md font-medium text-sm"
+            className="bg-gold-500 hover:bg-gold-600 text-white px-5 py-2 rounded-tl-2xl rounded-br-2xl transition-all transform hover:-translate-y-0.5 shadow-md font-medium text-sm"
           >
             Fale Comigo
           </a>
@@ -88,9 +105,21 @@ const Header: React.FC = () => {
               </button>
             );
           })}
+          
+          {/* Instagram in Mobile */}
+          <a
+            href="https://www.instagram.com/gabrielcostaadvogado/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 text-cream-100 hover:text-gold-400 py-2 border-b border-forest-800 text-sm font-medium"
+          >
+            <Instagram size={18} className="text-gold-400" />
+            Instagram: @gabrielcostaadvogado
+          </a>
+
           <a 
             href={CONTACT_DATA.whatsappUrl}
-            className="bg-gold-500 text-center text-white py-3 rounded-xl mt-2"
+            className="bg-gold-500 text-center text-white py-3 rounded-xl mt-2 font-medium"
           >
             Fale Comigo
           </a>

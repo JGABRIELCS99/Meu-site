@@ -79,24 +79,25 @@ const About: React.FC = () => {
                       </div>
                     </div>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div className="flex flex-wrap gap-2">
                       {[
                         'Direito Civil',
                         'Processo Civil',
                         'Constitucional',
                         'Direito Administrativo',
-                        'Holding'
+                        'Holding',
+                        'Inventário',
+                        'Divórcio',
+                        'Marcas'
                       ].map((curso, idx) => (
                         <div 
                           key={idx}
-                          className={`group bg-forest-950/50 border border-gold-500/30 rounded-xl p-3 hover:border-gold-400 hover:bg-gold-500/10 transition-all duration-300 flex items-center gap-2.5 shadow-sm ${
-                            idx === 4 ? 'sm:col-span-2' : ''
-                          }`}
+                          className="group bg-forest-950/60 border border-gold-500/30 rounded-xl px-3 py-2 hover:border-gold-400 hover:bg-gold-500/10 transition-all duration-300 flex items-center gap-2 shadow-sm"
                         >
-                          <div className="w-6 h-6 rounded-lg bg-gold-500/15 border border-gold-400/40 flex items-center justify-center shrink-0 group-hover:bg-gold-500/30 group-hover:scale-105 transition-all">
-                            <Award className="w-3.5 h-3.5 text-gold-400" />
+                          <div className="w-5 h-5 rounded-md bg-gold-500/15 border border-gold-400/40 flex items-center justify-center shrink-0 group-hover:bg-gold-500/30 group-hover:scale-105 transition-all">
+                            <Award className="w-3 h-3 text-gold-400" />
                           </div>
-                          <span className="text-xs font-medium text-cream-100 leading-tight">
+                          <span className="text-xs font-medium text-cream-100 leading-snug whitespace-normal">
                             {curso}
                           </span>
                         </div>

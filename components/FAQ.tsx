@@ -65,9 +65,9 @@ const FAQ: React.FC = () => {
         </div>
 
         <div className="grid gap-8">
-           {renderFaqList(FAQS_TRABALHISTA, 'trab', 'Dúvidas Trabalhistas')}
-           {renderFaqList(FAQS_PREVIDENCIARIO, 'prev', 'Dúvidas Previdenciárias')}
            {renderFaqList(FAQS_CIVIL, 'civil', 'Dúvidas de Direito Civil')}
+           {renderFaqList(FAQS_PREVIDENCIARIO, 'prev', 'Dúvidas Previdenciárias')}
+           {renderFaqList(FAQS_TRABALHISTA, 'trab', 'Dúvidas Trabalhistas')}
            {renderFaqList(FAQS_MARCAS, 'marcas', 'Dúvidas sobre Registro de Marcas', (
              <div className="mt-8 flex justify-center">
                 <a 
