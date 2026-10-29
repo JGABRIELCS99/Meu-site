@@ -3,7 +3,6 @@ titulo: Divórcio quando o outro não quer assinar: o que fazer?
 descricao: Seu marido ou sua esposa se recusa a assinar o divórcio? Entenda por que a recusa não impede o fim do casamento e como funciona o divórcio na Justiça.
 data: 2026-10-29
 area: familia
-rascunho: true
 ---
 
 Uma das dúvidas mais comuns de quem quer se divorciar é esta: **"e se ele (ou ela) não quiser assinar?"**. A resposta curta é que **a recusa do outro cônjuge não impede o divórcio**. Ela só muda o caminho: em vez de um acordo, o divórcio passa a ser pedido na Justiça.
