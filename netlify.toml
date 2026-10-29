@@ -1,0 +1,14 @@
+# Configuração de build do Netlify.
+# "npm run build" roda o Vite e, em seguida, o gerador de artigos
+# (scripts/build-articles.mjs), que cria /artigos/, o sitemap.xml e o robots.txt.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/artigos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

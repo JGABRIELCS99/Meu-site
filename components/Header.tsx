@@ -55,6 +55,13 @@ const Header: React.FC = () => {
             );
           })}
 
+          <a
+            href="/artigos/"
+            className={`text-sm font-medium tracking-wide hover:text-gold-500 transition-colors ${isScrolled ? 'text-cream-100' : 'text-forest-900'}`}
+          >
+            Artigos
+          </a>
+
           {/* Action Buttons: Instagram & Fale Comigo */}
           <div className="flex items-center gap-3">
             <a
@@ -107,6 +114,13 @@ const Header: React.FC = () => {
               </button>
             );
           })}
+
+          <a
+            href="/artigos/"
+            className="text-left text-cream-100 hover:text-gold-500 py-2 border-b border-forest-800"
+          >
+            Artigos
+          </a>
           
           {/* Action Buttons in Mobile: Instagram + Fale Comigo */}
           <div className="flex flex-col gap-2.5 mt-2">

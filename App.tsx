@@ -5,6 +5,7 @@ import Services from './components/Services';
 import About from './components/About';
 import CoverageArea from './components/CoverageArea';
 import FAQ from './components/FAQ';
+import LatestArticles from './components/LatestArticles';
 import Contact from './components/Contact';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <About />
         <Services />
         <CoverageArea />
+        <LatestArticles />
         <FAQ />
       </main>
       <Contact />
