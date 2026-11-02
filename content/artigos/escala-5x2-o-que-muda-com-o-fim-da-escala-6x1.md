@@ -3,7 +3,6 @@ titulo: Escala 5x2: como funciona e o que muda com o fim da escala 6x1?
 descricao: Entenda como funciona a escala 5x2, o que a Emenda Constitucional 141/2026 mudou na jornada e no descanso semanal e quais são os principais direitos do trabalhador.
 data: 2026-11-02
 area: trabalhista
-rascunho: true
 ---
 
 Com a promulgação da **Emenda Constitucional nº 141/2026**, em 16 de outubro de 2026, a escala **5x2** (cinco dias de trabalho e dois de descanso) passou a ser o centro de muitas conversas entre trabalhadores e empresas. A dúvida mais comum é simples: **"o que muda na prática para mim, e quando?"**
