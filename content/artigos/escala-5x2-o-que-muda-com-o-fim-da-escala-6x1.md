@@ -12,7 +12,7 @@ A resposta curta é que a emenda fixou **dois dias de descanso semanal remunerad
 
 > **Importante:** este texto é informativo e foi redigido com base na legislação vigente em 2 de novembro de 2026. Há regulamentações e propostas complementares em discussão no Congresso, e cada caso concreto deve ser analisado individualmente.
 
-**Ficou com dúvida sobre a sua jornada?** [Fale com o especialista pelo WhatsApp: (73) 98205-2016](https://wa.me/5573982052016).
+<div style="text-align:center;margin:26px 0"><p style="margin:0 0 10px"><strong>Ficou com dúvida sobre a sua jornada?</strong></p><a class="btn" href="https://wa.me/5573982052016?text=Ol%C3%A1%2C%20Dr.%20Gabriel!%20Li%20o%20artigo%20sobre%20a%20escala%205x2%20no%20seu%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista." target="_blank" rel="noopener" style="padding:14px 30px;font-size:16px">Falar com o especialista no WhatsApp</a></div>
 
 ## O que é a escala 5x2?
 
@@ -94,7 +94,7 @@ Por isso, há **dúvidas ainda em aberto** sobre como a 12x36 se encaixa no novo
 
 Quem trabalha em 12x36 não deve esperar mudança automática de escala nem aceitar alteração sem explicação: o ideal é ouvir o **sindicato da categoria** e, se houver dúvida sobre o seu caso, levar o contrato, a escala e os contracheques a um advogado.
 
-**Quer saber como as novas regras se aplicam ao seu caso?** [Converse com o especialista pelo WhatsApp: (73) 98205-2016](https://wa.me/5573982052016).
+<div style="text-align:center;margin:26px 0"><p style="margin:0 0 10px"><strong>Quer saber como as novas regras se aplicam ao seu caso?</strong></p><a class="btn" href="https://wa.me/5573982052016?text=Ol%C3%A1%2C%20Dr.%20Gabriel!%20Li%20o%20artigo%20sobre%20a%20escala%205x2%20no%20seu%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista." target="_blank" rel="noopener" style="padding:14px 30px;font-size:16px">Falar com o especialista no WhatsApp</a></div>
 
 ## Existem exceções? Quem pode ficar de fora?
 
