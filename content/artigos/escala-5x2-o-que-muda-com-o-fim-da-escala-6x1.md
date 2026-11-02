@@ -12,6 +12,8 @@ A resposta curta é que a emenda fixou **dois dias de descanso semanal remunerad
 
 > **Importante:** este texto é informativo e foi redigido com base na legislação vigente em 2 de novembro de 2026. Há regulamentações e propostas complementares em discussão no Congresso, e cada caso concreto deve ser analisado individualmente.
 
+**Ficou com dúvida sobre a sua jornada?** [Fale com o especialista pelo WhatsApp: (73) 98205-2016](https://wa.me/5573982052016).
+
 ## O que é a escala 5x2?
 
 É a organização do trabalho em que o empregado trabalha **cinco dias por semana** e descansa **dois dias**. Como a CLT e a Constituição falam em horas por dia e por semana, e não em "escalas" por nome, a 5x2 é, na prática, uma forma de distribuir a jornada semanal ao longo de cinco dias, em vez de seis (a chamada escala 6x1).
@@ -92,6 +94,8 @@ Por isso, há **dúvidas ainda em aberto** sobre como a 12x36 se encaixa no novo
 
 Quem trabalha em 12x36 não deve esperar mudança automática de escala nem aceitar alteração sem explicação: o ideal é ouvir o **sindicato da categoria** e, se houver dúvida sobre o seu caso, levar o contrato, a escala e os contracheques a um advogado.
 
+**Quer saber como as novas regras se aplicam ao seu caso?** [Converse com o especialista pelo WhatsApp: (73) 98205-2016](https://wa.me/5573982052016).
+
 ## Existem exceções? Quem pode ficar de fora?
 
 Sim. A emenda e as discussões em curso mencionam algumas situações específicas:
@@ -136,6 +140,8 @@ Em regra, quem se sentir lesado pode buscar a Justiça do Trabalho. Não há pro
 - Há exceções e regulamentações em discussão; por isso, vale analisar cada caso.
 
 Se você está em Camamu ou na região do Baixo Sul da Bahia e tem dúvidas sobre sua jornada, o escritório pode analisar o seu caso.
+
+Acompanhe mais conteúdos jurídicos no Instagram do escritório: [@gabrielcostaadvogado](https://www.instagram.com/gabrielcostaadvogado/).
 
 ---
 
