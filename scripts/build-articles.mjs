@@ -274,6 +274,11 @@ h1{font-family:'Playfair Display',serif;color:var(--forest-d);font-size:clamp(30
 .author img{width:84px;height:84px;border-radius:50%;object-fit:cover;flex-shrink:0}
 .author b{font-family:'Playfair Display',serif;font-size:20px;color:var(--forest-d)}
 .author p{margin:4px 0 0;font-size:15px;line-height:1.6;color:#4a524e}
+.author{align-items:flex-start}
+.author-label{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);margin-bottom:2px}
+.author .author-links{margin-top:8px}
+.author .author-links a{color:var(--gold-d);font-weight:600;text-decoration:none}
+@media(max-width:520px){.author{flex-direction:column;align-items:center;text-align:center}}
 .cta{background:var(--forest-d);color:var(--cream);border-radius:22px;padding:34px 28px;text-align:center;margin:34px 0}
 .cta h2{font-family:'Playfair Display',serif;color:#fff;font-size:28px;margin:0 0 8px}
 .cta p{margin:0 auto 20px;max-width:560px;color:#d9d4c7;font-size:16px}
@@ -442,7 +447,7 @@ ${a.html}
       <p class="note">Este conteúdo tem caráter exclusivamente informativo e não substitui a análise individual do seu caso por um advogado.</p>
       <section class="author">
         <img src="${esc(SITE.foto)}" alt="Gabriel Costa, advogado" width="84" height="84">
-        <div><b>Gabriel Costa</b><p>Advogado (${esc(SITE.oab)}), pós-graduado em Direito Previdenciário e em Direito das Famílias e Sucessões. Atende em Camamu e no Baixo Sul da Bahia, presencialmente e on-line.</p></div>
+        <div><span class="author-label">Sobre o autor</span><b>Gabriel Costa</b><p>Advogado (${esc(SITE.oab)}), pós-graduado em Direito Previdenciário e em Direito das Famílias e Sucessões. Atuou por cerca de três anos no Fórum de Camamu, foi aprovado em dois concursos públicos federais para Tribunais Regionais do Trabalho e tem artigos publicados em revistas jurídicas. Atua em Direito Previdenciário, Trabalhista, de Família e do Consumidor, com escritório em Camamu/BA e atendimento presencial e on-line.</p><p class="author-links"><a href="${SITE.instagram}" target="_blank" rel="noopener">Instagram @gabrielcostaadvogado</a></p></div>
       </section>
       <section class="cta">
         <h2>Ficou com alguma dúvida sobre o seu caso?</h2>

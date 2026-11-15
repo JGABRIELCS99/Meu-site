@@ -3,7 +3,6 @@ titulo: "Escala 5x2 em restaurantes, hotéis e pousadas: o que o STF decidiu sob
 descricao: Entenda a liminar do ministro Flávio Dino sobre a escala 5x2, a jornada de 8h24 sem hora extra, as folgas e o pedido de Fux para levar o caso ao plenário do STF.
 data: 2026-11-15
 area: trabalhista
-rascunho: true
 ---
 
 A resposta curta: **a escala 5x2 começa mesmo em 16 de dezembro de 2026.** Em 12 de novembro, o ministro **Flávio Dino**, do Supremo Tribunal Federal (STF), negou o pedido para adiar a mudança e definiu regras para a transição. A principal delas: se não houver acordo ou convenção coletiva até 15 de dezembro, a empresa pode distribuir as **42 horas semanais em cinco dias de até 8h24**, sem pagar hora extra por esses 24 minutos. Dois dias depois, em 14 de novembro, o ministro **Luiz Fux** pediu que o caso fosse julgado no plenário físico do STF. **Enquanto isso, a decisão de Dino continua valendo.**
