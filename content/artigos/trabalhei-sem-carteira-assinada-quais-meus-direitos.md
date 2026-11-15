@@ -3,7 +3,6 @@ titulo: "Trabalhei sem carteira assinada: quais são os meus direitos?"
 descricao: Quem trabalhou sem registro pode ter vínculo reconhecido e receber 13º, férias, FGTS e aviso prévio. Veja os direitos, as provas e o prazo de 2 anos.
 data: 2026-11-15
 area: trabalhista
-rascunho: true
 ---
 
 A resposta curta: **quem trabalhou como empregado sem carteira assinada tem os mesmos direitos de quem foi registrado.** Se ficar provado o vínculo de emprego, o trabalhador pode pedir na Justiça do Trabalho a anotação da carteira e o pagamento de tudo o que deixou de receber, como **13º salário, férias com 1/3, FGTS, aviso prévio e horas extras**, além de ter o período contado para a aposentadoria. Mas há prazo: a ação deve ser proposta em até **2 anos depois que o trabalho terminou**.

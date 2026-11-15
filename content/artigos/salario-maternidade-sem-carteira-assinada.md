@@ -3,7 +3,6 @@ titulo: "Salário-maternidade sem carteira assinada: quem tem direito?"
 descricao: Trabalhadora rural, MEI, autônoma, quem paga o INSS por conta própria e até desempregada podem ter direito ao salário-maternidade. Veja os requisitos.
 data: 2026-11-15
 area: previdenciario
-rascunho: true
 ---
 
 A resposta curta: **não é preciso ter carteira assinada para receber o salário-maternidade.** Têm direito também a **trabalhadora rural** (segurada especial), a **MEI**, a **autônoma** que contribui ao INSS, a **dona de casa que paga como facultativa** e a **desempregada que ainda mantém a qualidade de segurada**. Desde a decisão do Supremo Tribunal Federal (STF) nas ADIs 2.110 e 2.111, o INSS **não exige mais as 10 contribuições de carência** dessas seguradas. O benefício dura, em regra, **120 dias** e pode ser pedido em até **5 anos** depois do parto.

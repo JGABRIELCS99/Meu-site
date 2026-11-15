@@ -3,7 +3,6 @@ titulo: "Problema na coluna dá direito a auxílio-doença?"
 descricao: Hérnia de disco, bico de papagaio e lombalgia podem dar direito ao auxílio-doença do INSS. Entenda os requisitos, os documentos e o que fazer se for negado.
 data: 2026-11-15
 area: previdenciario
-rascunho: true
 ---
 
 A resposta curta: **sim, problemas na coluna podem dar direito ao auxílio-doença**, hoje chamado de **auxílio por incapacidade temporária**, mas **não basta ter o diagnóstico**. O INSS concede o benefício quando a doença **impede a pessoa de fazer o seu trabalho por mais de 15 dias seguidos**. Além disso, é preciso ter **qualidade de segurado** e, em regra, **12 contribuições** ao INSS. Hérnia de disco, artrose ("bico de papagaio"), lombalgia, ciática e escoliose estão entre os problemas que mais levam a pedidos desse tipo.

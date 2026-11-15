@@ -3,7 +3,6 @@ titulo: "Pai não paga pensão alimentícia: o que a mãe pode fazer?"
 descricao: Pensão atrasada pode levar à prisão do devedor, penhora de bens, desconto no salário, protesto e até suspensão da CNH. Veja como cobrar e os prazos.
 data: 2026-11-15
 area: familia
-rascunho: true
 ---
 
 A resposta curta: **a pensão alimentícia atrasada pode ser cobrada na Justiça**, e a lei dá ferramentas fortes para isso. Se o pai deixou de pagar pensão fixada pelo juiz ou em acordo homologado, é possível pedir a **prisão civil** pelas **três últimas parcelas** e pelas que vencerem durante o processo, a **penhora de bens e de contas**, o **desconto direto no salário**, o **protesto** do débito e, em alguns casos, medidas como a **suspensão da CNH** ou do passaporte. Se ainda não existe pensão fixada, o primeiro passo é entrar com a **ação de alimentos**.

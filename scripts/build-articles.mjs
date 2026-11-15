@@ -620,6 +620,7 @@ function main() {
   }))));
   fs.writeFileSync(path.join(pastaArtigos, 'feed.xml'), feed(artigos));
   fs.mkdirSync(path.join(DIST, CALC_SLUG), { recursive: true });
+  gerarCapa({ titulo: 'Calculadora de rescisão trabalhista', areaNome: 'Direito do Trabalho' }, path.join(DIST, CALC_SLUG, 'capa.png'));
   fs.writeFileSync(path.join(DIST, CALC_SLUG, 'index.html'), paginaCalculadora({ head, topo, rodape, cardAutor, SITE, SITE_URL, esc }));
   console.log(`  ✓ /${CALC_SLUG}/`);
   fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap(artigos));

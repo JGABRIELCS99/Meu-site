@@ -37,6 +37,11 @@ const CSS_CALC = `
 .miss ul{margin:0 0 14px;padding-left:20px;font-size:15px;line-height:1.55}
 .miss .btn{font-size:15px;padding:12px 22px}
 .hint{font-size:13px;color:var(--muted);text-align:center;margin:10px 0 0}
+.f input[type=date]{-webkit-appearance:none;appearance:none;min-height:48px;display:block;line-height:1.2}
+.go,.f select,.f input{min-height:48px}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 24px}.tbl table{margin:0;min-width:560px;font-size:15px}
+.hero{padding-bottom:0}.hero .lead{margin-bottom:0}
+@media(max-width:520px){.calc{padding:18px 16px;margin:18px 0;border-radius:16px}.res-head strong{font-size:30px}.tab{font-size:14px}.hero h1{font-size:30px}.hero .lead{font-size:17px}.miss{padding:16px}}
 `;
 
 function scriptCalc(whatsapp) {
@@ -132,6 +137,12 @@ function scriptCalc(whatsapp) {
       : 'Nesse tipo de saída, em regra, não há saque imediato do FGTS nem multa.';
     var seguro = mot==='sjc'?' Você pode ter direito ao <b>seguro-desemprego</b>, se cumprir os requisitos.':' Nesse tipo de saída, não há direito ao seguro-desemprego.';
     $('fgtsinfo').innerHTML='<b>FGTS e seguro-desemprego:</b> '+saque+seguro;
+    // Prazo de 2 anos, contado do fim do contrato (com o aviso indenizado projetado) — Constituição, art. 7º, XXIX.
+    var limite=new Date(fim.getFullYear()+2,fim.getMonth(),fim.getDate()), hoje=new Date(); hoje.setHours(0,0,0,0);
+    var dl=limite.toLocaleDateString('pt-BR');
+    $('prazo').innerHTML = hoje>limite
+      ? '<b>Atenção ao prazo:</b> o prazo de 2 anos para cobrar diferenças da rescisão na Justiça terminou em '+dl+'. Ainda pode ser possível buscar o reconhecimento do tempo para a aposentadoria.'
+      : '<b>Prazo para cobrar diferenças:</b> até '+dl+' (2 anos após o fim do contrato). Na ação, é possível cobrar valores dos últimos 5 anos.';
 
     var msg='Olá, Dr. Gabriel! Usei a calculadora de rescisão do site. Motivo: '+MOT[mot]+'. Tempo de empresa: '+anos+' ano(s). Estimativa: '+brl(Math.max(0,total))+'. Gostaria de conferir o cálculo completo da minha rescisão.';
     var link=WA+'?text='+encodeURIComponent(msg);
@@ -146,8 +157,8 @@ function scriptCalc(whatsapp) {
 
 export function paginaCalculadora({ head, topo, rodape, cardAutor, SITE, SITE_URL, esc }) {
   const url = `${SITE_URL}/${CALC_SLUG}/`;
-  const titulo = 'Calculadora de rescisão trabalhista: simule suas verbas';
-  const descricao = 'Calcule de graça uma estimativa da rescisão: saldo de salário, aviso prévio, 13º, férias com 1/3 e multa do FGTS, conforme o motivo da saída.';
+  const titulo = 'Calculadora de rescisão trabalhista grátis';
+  const descricao = 'Calculadora de rescisão grátis: simule saldo de salário, aviso prévio, 13º, férias com 1/3 e multa de 40% do FGTS, conforme o motivo da saída.';
   const wa = (texto) => `${SITE.whatsapp}?text=${encodeURIComponent(texto)}`;
   const waGeral = wa('Olá, Dr. Gabriel! Vim pela calculadora de rescisão do site e gostaria de conferir o cálculo completo da minha rescisão.');
   const waTrct = wa('Olá, Dr. Gabriel! Vim pela calculadora de rescisão do site e gostaria de enviar meu termo de rescisão para conferir se os valores estão corretos.');
@@ -161,10 +172,11 @@ export function paginaCalculadora({ head, topo, rodape, cardAutor, SITE, SITE_UR
 
   const jsonld = [
     { '@context': 'https://schema.org', '@type': 'WebApplication', name: titulo, url, applicationCategory: 'FinanceApplication', operatingSystem: 'Web', inLanguage: 'pt-BR', offers: { '@type': 'Offer', price: '0', priceCurrency: 'BRL' }, author: { '@type': 'Person', name: SITE.autor } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Início', item: `${SITE_URL}/` }, { '@type': 'ListItem', position: 2, name: 'Calculadora de rescisão', item: url }] },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
   ];
 
-  return `${head({ titulo: `${titulo} | ${SITE.nome}`, descricao, url, imagem: SITE.foto, jsonld, extra: `<style>${CSS_CALC.replace(/\n/g, '')}</style>` })}
+  return `${head({ titulo: `${titulo} | ${SITE.nome}`, descricao, url, imagem: `${SITE_URL}/${CALC_SLUG}/capa.png`, jsonld, extra: `<style>${CSS_CALC.replace(/\n/g, '')}</style>` })}
 <body>
 ${topo('calculadora')}
 <main class="wrap">
@@ -173,11 +185,6 @@ ${topo('calculadora')}
     <span class="tag">Direito do Trabalho</span>
     <h1>Calculadora de rescisão trabalhista</h1>
     <p class="lead">Saiu do emprego ou está prestes a sair? Simule de graça as principais verbas da rescisão: saldo de salário, aviso prévio, 13º, férias com 1/3 e multa do FGTS.</p>
-    <div class="meta">
-      <img src="${esc(SITE.foto)}" alt="Foto de Gabriel Costa" width="34" height="34">
-      <span>Por <strong>${esc(SITE.autor)}</strong> · ${esc(SITE.oab)}</span>
-      <span>Atualizada em 15 de novembro de 2026</span>
-    </div>
   </header>
   <div class="layout">
     <section class="calc" aria-label="Calculadora">
@@ -207,6 +214,7 @@ ${topo('calculadora')}
         <div class="res-head"><span>Estimativa da sua rescisão</span><strong id="total">R$ 0,00</strong><p id="resumo"></p></div>
         <table class="tab"><tbody id="tabela"></tbody></table>
         <p class="info" id="fgtsinfo"></p>
+        <p class="info" id="prazo"></p>
         <p class="info">Valores <b>brutos e aproximados</b>, sem descontos de INSS e Imposto de Renda. Esta simulação não substitui o cálculo feito com os seus documentos.</p>
         <div class="miss">
           <h3>O que esta simulação não considera</h3>
@@ -231,21 +239,8 @@ ${topo('calculadora')}
       <p>Se quiser, envie o seu termo de rescisão e os contracheques para uma análise com o especialista.</p>
       <p><a class="btn" href="${esc(waTrct)}" target="_blank" rel="noopener">Enviar minha rescisão para análise</a></p>
 
-      <h2 id="como-calcula">Como a calculadora faz a conta</h2>
-      <table>
-        <thead><tr><th>Verba</th><th>Como é calculada</th></tr></thead>
-        <tbody>
-          <tr><td>Saldo de salário</td><td>Salário dividido por 30, multiplicado pelos dias trabalhados no mês da saída</td></tr>
-          <tr><td>Aviso prévio</td><td>30 dias, mais 3 dias por ano completo de empresa, até 90 dias (Lei 12.506/2011). Quando indenizado, esse período também conta para o 13º e as férias (CLT, art. 487, § 1º)</td></tr>
-          <tr><td>13º proporcional</td><td>1/12 do salário por mês trabalhado no ano, contando o mês com 15 dias ou mais (Lei 4.090/1962)</td></tr>
-          <tr><td>Férias proporcionais + 1/3</td><td>1/12 do salário por mês do período aquisitivo em andamento, contando a fração acima de 14 dias, mais 1/3 (CLT, arts. 146 e 147; Constituição, art. 7º, XVII)</td></tr>
-          <tr><td>Férias vencidas + 1/3</td><td>Um salário mais 1/3 por período completo de férias não tirado (CLT, art. 146)</td></tr>
-          <tr><td>Multa do FGTS</td><td>40% do FGTS na dispensa sem justa causa (Lei 8.036/1990, art. 18, § 1º) e 20% no acordo (CLT, art. 484-A)</td></tr>
-        </tbody>
-      </table>
-
       <h2 id="por-motivo">O que muda conforme o motivo da saída</h2>
-      <table>
+      <div class="tbl"><table>
         <thead><tr><th>Verba</th><th>Sem justa causa</th><th>Pedido de demissão</th><th>Acordo</th><th>Justa causa</th></tr></thead>
         <tbody>
           <tr><td>Saldo de salário</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
@@ -257,7 +252,7 @@ ${topo('calculadora')}
           <tr><td>Saque do FGTS</td><td>Sim</td><td>Não</td><td>Até 80%</td><td>Não</td></tr>
           <tr><td>Seguro-desemprego</td><td>Se cumprir os requisitos</td><td>Não</td><td>Não</td><td>Não</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <p>No pedido de demissão, o 13º proporcional e as férias proporcionais são devidos mesmo com menos de 1 ano de empresa (Súmulas 157 e 261 do TST). Na justa causa, as férias proporcionais não são devidas (Súmula 171 do TST). No acordo, o aviso prévio indenizado e a multa do FGTS são pagos pela metade, as demais verbas são pagas por inteiro, o saque do FGTS fica limitado a 80% e não há seguro-desemprego (CLT, art. 484-A).</p>
 
       <h2 id="duvidas">Perguntas frequentes</h2>

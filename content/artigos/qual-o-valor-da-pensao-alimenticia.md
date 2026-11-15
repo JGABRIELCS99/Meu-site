@@ -3,7 +3,6 @@ titulo: "Qual o valor da pensão alimentícia? Existe mesmo a regra dos 30%?"
 descricao: A lei não fixa 30% nem valor mínimo para a pensão. Entenda como o juiz calcula, o que entra na conta, como fica para autônomo ou desempregado e como revisar.
 data: 2026-11-15
 area: familia
-rascunho: true
 ---
 
 A resposta curta: **não existe na lei uma regra de 30% do salário, nem um valor mínimo ou máximo de pensão alimentícia.** O valor é definido caso a caso, pelo que o filho **precisa** e pelo que o pai ou a mãe que paga **pode pagar**, conforme o art. 1.694, § 1º, do Código Civil. Os 30% são apenas um percentual que aparece com frequência na prática, e por isso virou "regra" no boca a boca. Dependendo do caso, o valor pode ficar abaixo ou acima disso.
