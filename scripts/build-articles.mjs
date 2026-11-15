@@ -447,7 +447,7 @@ ${a.html}
       <p class="note">Este conteúdo tem caráter exclusivamente informativo e não substitui a análise individual do seu caso por um advogado.</p>
       <section class="author">
         <img src="${esc(SITE.foto)}" alt="Gabriel Costa, advogado" width="84" height="84">
-        <div><span class="author-label">Sobre o autor</span><b>Gabriel Costa</b><p>Advogado (${esc(SITE.oab)}), pós-graduado em Direito Previdenciário e em Direito das Famílias e Sucessões. Atuou por cerca de três anos no Fórum de Camamu, foi aprovado em dois concursos públicos federais para Tribunais Regionais do Trabalho e tem artigos publicados em revistas jurídicas. Atua em Direito Previdenciário, Trabalhista, de Família e do Consumidor, com escritório em Camamu/BA e atendimento presencial e on-line.</p><p class="author-links"><a href="${SITE.instagram}" target="_blank" rel="noopener">Instagram @gabrielcostaadvogado</a></p></div>
+        <div><span class="author-label">Sobre o autor</span><b>Gabriel Costa</b><p>Advogado (${esc(SITE.oab)}), pós-graduado em Direito Previdenciário e em Direito das Famílias e Sucessões. Foi aprovado em dois concursos públicos federais para Tribunais Regionais do Trabalho e tem artigos publicados em revistas jurídicas. Atua em Direito Previdenciário, Trabalhista, de Família e do Consumidor, com escritório em Camamu/BA e atendimento presencial e on-line.</p><p class="author-links"><a href="${SITE.instagram}" target="_blank" rel="noopener">Instagram @gabrielcostaadvogado</a></p></div>
       </section>
       <section class="cta">
         <h2>Ficou com alguma dúvida sobre o seu caso?</h2>
