@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Instagram } from 'lucide-react';
 import { CONTACT_DATA, IMAGES } from '../constants';
+import { trackConversion } from '../analytics';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,6 +69,7 @@ const Header: React.FC = () => {
               href={CONTACT_DATA.instagramUrl}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackConversion('Instagram Topo', 'instagram')}
               aria-label="Instagram do Dr. Gabriel Costa"
               className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-tl-2xl rounded-br-2xl border text-xs font-semibold transition-all cursor-pointer shadow-sm hover:scale-105 ${
                 isScrolled
@@ -83,6 +85,7 @@ const Header: React.FC = () => {
               href={CONTACT_DATA.whatsappUrl}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackConversion('WhatsApp Topo', 'whatsapp')}
               className="bg-gold-500 hover:bg-gold-600 text-white px-5 py-2 rounded-tl-2xl rounded-br-2xl transition-all transform hover:-translate-y-0.5 shadow-md font-medium text-sm flex items-center justify-center"
             >
               Fale Comigo
@@ -128,6 +131,7 @@ const Header: React.FC = () => {
               href={CONTACT_DATA.instagramUrl}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackConversion('Instagram Menu Mobile', 'instagram')}
               className="flex items-center justify-center gap-2 border border-gold-500/60 text-gold-300 hover:bg-gold-500/20 py-2.5 rounded-tl-2xl rounded-br-2xl text-sm font-semibold transition-colors"
             >
               <Instagram size={18} className="text-gold-400" />
@@ -138,6 +142,7 @@ const Header: React.FC = () => {
               href={CONTACT_DATA.whatsappUrl}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackConversion('WhatsApp Menu Mobile', 'whatsapp')}
               className="bg-gold-500 hover:bg-gold-600 text-center text-white py-3 rounded-tl-2xl rounded-br-2xl font-medium shadow-md transition-all"
             >
               Fale Comigo

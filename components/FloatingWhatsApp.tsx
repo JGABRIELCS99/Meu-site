@@ -1,6 +1,7 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { CONTACT_DATA } from '../constants';
+import { trackConversion } from '../analytics';
 
 const FloatingWhatsApp: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ const FloatingWhatsApp: React.FC = () => {
       href={CONTACT_DATA.whatsappUrl}
       target="_blank"
       rel="noreferrer"
+      onClick={() => trackConversion('WhatsApp Flutuante', 'whatsapp')}
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 hover:rotate-3 flex items-center justify-center group"
       aria-label="Falar no WhatsApp"
     >

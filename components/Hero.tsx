@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ExternalLink, Instagram } from 'lucide-react';
 import { CONTACT_DATA, IMAGES } from '../constants';
+import { trackConversion } from '../analytics';
 
 const Hero: React.FC = () => {
   const [activeWordIndex, setActiveWordIndex] = useState<number>(0);
@@ -76,6 +77,7 @@ const Hero: React.FC = () => {
                 href={CONTACT_DATA.whatsappUrl}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackConversion('WhatsApp Hero', 'whatsapp')}
                 className="group bg-forest-900 text-white px-8 py-4 rounded-tl-3xl rounded-br-3xl hover:bg-forest-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3 hover:-translate-y-0.5 font-medium"
               >
                 <span>Fale Comigo</span>
@@ -86,6 +88,7 @@ const Hero: React.FC = () => {
                 href={CONTACT_DATA.instagramUrl}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackConversion('Instagram Hero', 'instagram')}
                 className="group bg-white/95 hover:bg-white text-forest-900 border-2 border-gold-500/70 hover:border-gold-500 px-7 py-4 rounded-tl-3xl rounded-br-3xl transition-all shadow-md hover:shadow-xl flex items-center justify-center gap-3 hover:-translate-y-0.5 font-medium"
                 aria-label="Acompanhe Dr. Gabriel Costa no Instagram"
               >

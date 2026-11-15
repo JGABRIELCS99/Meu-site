@@ -1,8 +1,13 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Lock } from 'lucide-react';
 import { CONTACT_DATA, IMAGES } from '../constants';
+import { trackConversion } from '../analytics';
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  onOpenMetrics?: () => void;
+}
+
+const Contact: React.FC<ContactProps> = ({ onOpenMetrics }) => {
   const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT_DATA.address)}`;
   const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT_DATA.email}`;
 
@@ -32,6 +37,7 @@ const Contact: React.FC = () => {
                     href={gmailComposeUrl}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackConversion('Email Footer', 'email')}
                     className="text-lg hover:text-gold-500 transition-colors break-all"
                     title="Abrir no Gmail"
                   >
@@ -50,6 +56,7 @@ const Contact: React.FC = () => {
                     href={CONTACT_DATA.whatsappUrl}
                     target="_blank"
                     rel="noreferrer" 
+                    onClick={() => trackConversion('WhatsApp Footer', 'whatsapp')}
                     className="text-lg hover:text-gold-500 transition-colors"
                     title="Abrir no WhatsApp"
                   >
@@ -94,14 +101,26 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="border-t border-forest-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} Gabriel Costa Advocacia. Todos os direitos reservados.
-          </p>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs text-gray-500">
+            <p className="text-sm">
+              © {new Date().getFullYear()} Gabriel Costa Advocacia. Todos os direitos reservados.
+            </p>
+            <span className="hidden sm:inline text-gray-700">•</span>
+            <button
+              onClick={onOpenMetrics}
+              className="text-gray-500 hover:text-gold-400 transition-colors flex items-center gap-1.5 py-1 px-2 rounded hover:bg-forest-800/80"
+              title="Acesso Privado ao Painel de Métricas (Requer Senha)"
+            >
+              <Lock size={12} className="text-gold-500/80" />
+              <span>Painel de Métricas (Acesso Restrito)</span>
+            </button>
+          </div>
           <div className="flex gap-4">
              <a 
                href={CONTACT_DATA.instagramUrl} 
                target="_blank" 
                rel="noreferrer" 
+               onClick={() => trackConversion('Instagram Footer', 'instagram')}
                aria-label="Instagram do Dr. Gabriel Costa" 
                className="text-gray-400 hover:text-gold-500 transition-colors"
              >

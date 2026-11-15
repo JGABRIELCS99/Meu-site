@@ -326,6 +326,31 @@ function head({ titulo, descricao, url, imagem, tipo = 'website', jsonld = [], e
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="Artigos — ${esc(SITE.nome)}" href="${SITE_URL}/artigos/feed.xml">
 <link rel="icon" href="${esc(SITE.logo)}">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-01W1MTQFV9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-01W1MTQFV9');
+  try {
+    var k = 'gca_analytics_data_v1';
+    var d = JSON.parse(localStorage.getItem(k) || '{"events":[]}');
+    d.events = d.events || [];
+    var isMobile = /Mobile|Android|iP(hone|od)/.test(navigator.userAgent);
+    d.events.push({
+      id: 'ev_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+      timestamp: Date.now(),
+      type: 'pageview',
+      target: 'Artigo: ' + ${JSON.stringify(titulo)},
+      path: location.pathname,
+      referrer: document.referrer ? (document.referrer.indexOf('google') > -1 ? 'Google' : document.referrer.indexOf('instagram') > -1 ? 'Instagram' : 'Outro') : 'Direto',
+      device: isMobile ? 'mobile' : 'desktop'
+    });
+    if (d.events.length > 1000) d.events = d.events.slice(-1000);
+    localStorage.setItem(k, JSON.stringify(d));
+  } catch(e){}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
