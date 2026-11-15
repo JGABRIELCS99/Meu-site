@@ -15,6 +15,7 @@
 // Veja CLAUDE.md para o formato completo.
 // =====================================================================
 
+import { paginaCalculadora, CALC_SLUG, CALC_ATUALIZADO } from './calculadora.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -367,6 +368,7 @@ function topo(ativo = '') {
     <a href="/#about">Sobre Mim</a>
     <a href="/#services">Áreas de Atuação</a>
     <a href="/artigos/"${ativo === 'artigos' ? ' class="on"' : ''}>Artigos</a>
+    <a href="/calculadora-rescisao/"${ativo === 'calculadora' ? ' class="on"' : ''}>Calculadora</a>
     <a href="/#contact">Contato</a>
     <a class="btn" href="${SITE.whatsapp}" target="_blank" rel="noopener">Fale Comigo</a>
   </nav>
@@ -377,8 +379,15 @@ function rodape() {
   return `<footer><div class="wrap">
   <div><b>Gabriel Costa Advogado</b><br>${esc(SITE.oab)}<br>${esc(SITE.endereco)}</div>
   <div>WhatsApp: <a href="${SITE.whatsapp}" target="_blank" rel="noopener">${esc(SITE.telefone)}</a><br>E-mail: <a href="mailto:${SITE.email}">${esc(SITE.email)}</a><br>Instagram: <a href="${SITE.instagram}" target="_blank" rel="noopener">@gabrielcostaadvogado</a></div>
-  <div><a href="/">Página inicial</a><br><a href="/artigos/">Todos os artigos</a><br><a href="/artigos/feed.xml">Feed RSS</a></div>
+  <div><a href="/">Página inicial</a><br><a href="/artigos/">Todos os artigos</a><br><a href="/calculadora-rescisao/">Calculadora de rescisão</a><br><a href="/artigos/feed.xml">Feed RSS</a></div>
 </div></footer>`;
+}
+
+function cardAutor() {
+  return `<section class="author">
+        <img src="${esc(SITE.foto)}" alt="Gabriel Costa, advogado" width="84" height="84">
+        <div><span class="author-label">Sobre o autor</span><b>Gabriel Costa</b><p>Advogado (${esc(SITE.oab)}), pós-graduado em Direito Previdenciário e em Direito das Famílias e Sucessões. Foi aprovado em dois concursos públicos federais para Tribunais Regionais do Trabalho e tem artigos publicados em revistas jurídicas. Atua em Direito Previdenciário, Trabalhista, de Família e do Consumidor, com escritório em Camamu/BA e atendimento presencial e on-line.</p><p class="author-links"><a href="${SITE.instagram}" target="_blank" rel="noopener">Instagram @gabrielcostaadvogado</a></p></div>
+      </section>`;
 }
 
 function card(a) {
@@ -470,10 +479,7 @@ ${topo('artigos')}
 ${a.html}
       </div>
       <p class="note">Este conteúdo tem caráter exclusivamente informativo e não substitui a análise individual do seu caso por um advogado.</p>
-      <section class="author">
-        <img src="${esc(SITE.foto)}" alt="Gabriel Costa, advogado" width="84" height="84">
-        <div><span class="author-label">Sobre o autor</span><b>Gabriel Costa</b><p>Advogado (${esc(SITE.oab)}), pós-graduado em Direito Previdenciário e em Direito das Famílias e Sucessões. Foi aprovado em dois concursos públicos federais para Tribunais Regionais do Trabalho e tem artigos publicados em revistas jurídicas. Atua em Direito Previdenciário, Trabalhista, de Família e do Consumidor, com escritório em Camamu/BA e atendimento presencial e on-line.</p><p class="author-links"><a href="${SITE.instagram}" target="_blank" rel="noopener">Instagram @gabrielcostaadvogado</a></p></div>
-      </section>
+      ${cardAutor()}
       <section class="cta">
         <h2>Ficou com alguma dúvida sobre o seu caso?</h2>
         <p>Cada situação tem detalhes próprios. Fale com o escritório e receba uma orientação sobre o seu caso.</p>
@@ -543,6 +549,7 @@ function sitemap(artigos) {
   } else {
     urls.push(`  <url><loc>${SITE_URL}/artigos/</loc></url>`);
   }
+  urls.push(`  <url><loc>${SITE_URL}/${CALC_SLUG}/</loc><lastmod>${CALC_ATUALIZADO}</lastmod></url>`);
   for (const a of artigos) urls.push(`  <url><loc>${a.url}</loc><lastmod>${a.atualizado}</lastmod></url>`);
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`;
 }
@@ -612,6 +619,9 @@ function main() {
     slug: a.slug, titulo: a.titulo, descricao: a.descricao, data: a.data, area: a.area, areaNome: a.areaNome, imagem: a.imagemSrc,
   }))));
   fs.writeFileSync(path.join(pastaArtigos, 'feed.xml'), feed(artigos));
+  fs.mkdirSync(path.join(DIST, CALC_SLUG), { recursive: true });
+  fs.writeFileSync(path.join(DIST, CALC_SLUG, 'index.html'), paginaCalculadora({ head, topo, rodape, cardAutor, SITE, SITE_URL, esc }));
+  console.log(`  ✓ /${CALC_SLUG}/`);
   fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap(artigos));
   fs.writeFileSync(path.join(DIST, 'robots.txt'), robots());
 

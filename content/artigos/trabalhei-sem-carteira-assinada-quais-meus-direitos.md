@@ -41,7 +41,7 @@ Reconhecido o vínculo, o trabalhador pode receber as verbas do período trabalh
 - **guias do seguro-desemprego** ou indenização equivalente, se preencher os requisitos;
 - **recolhimento das contribuições ao INSS** do período.
 
-O valor final depende do tempo de trabalho, do salário, da forma de saída e das provas de cada caso.
+O valor final depende do tempo de trabalho, do salário, da forma de saída e das provas de cada caso. Para ter uma ideia das verbas principais, você pode usar a nossa [calculadora de rescisão](/calculadora-rescisao/).
 
 ## Qual é o prazo para entrar com a ação?
 
