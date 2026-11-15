@@ -3,7 +3,6 @@ titulo: "Aposentadoria em 2027: o que muda nas regras do INSS a partir de janeir
 descricao: Veja a idade e os pontos exigidos em 2027 nas regras de transição da Reforma da Previdência, o que não muda e quem ainda pode se aposentar pelas regras de 2026.
 data: 2026-11-15
 area: previdenciario
-rascunho: true
 ---
 
 A resposta curta: **em 1º de janeiro de 2027, duas regras de transição da aposentadoria ficam mais exigentes.** A regra de pontos passa a exigir **94 pontos para mulheres e 104 para homens**, e a regra da idade mínima progressiva passa a exigir **60 anos para mulheres e 65 para homens**, além do tempo de contribuição. Não é uma lei nova: esses aumentos anuais já estavam previstos na Reforma da Previdência (Emenda Constitucional nº 103/2019).
