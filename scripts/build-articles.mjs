@@ -352,6 +352,49 @@ function head({ titulo, descricao, url, imagem, tipo = 'website', jsonld = [], e
     localStorage.setItem(k, JSON.stringify(d));
   } catch(e){}
 </script>
+<script>
+// Medição de contatos: cada clique em WhatsApp / telefone / e-mail / Instagram vira
+// um evento no GA4. WhatsApp = "generate_lead" (marque como evento-chave no GA4).
+document.addEventListener('click', function (ev) {
+  try {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    var canal = h.indexOf('wa.me') > -1 || h.indexOf('api.whatsapp.com') > -1 ? 'whatsapp'
+      : h.indexOf('tel:') === 0 ? 'phone'
+      : h.indexOf('mailto:') === 0 ? 'email'
+      : h.indexOf('instagram.com') > -1 ? 'instagram' : '';
+    if (!canal) return;
+    var local = a.closest('.cta') ? 'CTA do artigo' : a.closest('footer') ? 'Rodapé' : a.closest('header') ? 'Topo' : 'Corpo do texto';
+    var origem = location.pathname.indexOf('/artigos/') === 0 && location.pathname !== '/artigos/' ? 'artigo' : 'site';
+    if (window.gtag) {
+      gtag('event', canal === 'whatsapp' ? 'generate_lead' : 'contact_click', {
+        event_category: canal,
+        event_label: local + ' · ' + location.pathname,
+        link_local: local,
+        lead_source: origem,
+        page_path: location.pathname,
+        transport_type: 'beacon'
+      });
+    }
+    var k = 'gca_analytics_data_v1';
+    var d = JSON.parse(localStorage.getItem(k) || '{"events":[]}');
+    d.events = d.events || [];
+    var nomes = { whatsapp: 'WhatsApp', phone: 'Telefone', email: 'E-mail', instagram: 'Instagram' };
+    d.events.push({
+      id: 'cl_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+      timestamp: Date.now(),
+      type: 'click',
+      target: 'Conversão: ' + nomes[canal] + ' (' + local + ')',
+      path: location.pathname,
+      referrer: document.referrer ? (document.referrer.indexOf('google') > -1 ? 'Google' : document.referrer.indexOf('instagram') > -1 ? 'Instagram' : 'Outro') : 'Direto',
+      device: /Mobile|Android|iP(hone|od)/.test(navigator.userAgent) ? 'mobile' : 'desktop'
+    });
+    if (d.events.length > 1000) d.events = d.events.slice(-1000);
+    localStorage.setItem(k, JSON.stringify(d));
+  } catch (e) {}
+}, true);
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">

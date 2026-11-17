@@ -27,6 +27,9 @@ import {
   logoutMetrics, 
   changeMetricsPassword, 
   resetMetricsData,
+  hasMetricsPassword,
+  setupMetricsPassword,
+  getMinPasswordLength,
   AnalyticsEvent 
 } from '../analytics';
 import { CONTACT_DATA } from '../constants';
@@ -42,6 +45,8 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [passwordInput, setPasswordInput] = useState<string>('');
   const [loginError, setLoginError] = useState<string>('');
+  const [passwordConfirm, setPasswordConfirm] = useState<string>('');
+  const [needsSetup, setNeedsSetup] = useState<boolean>(false);
   
   // Dashboard state
   const [period, setPeriod] = useState<'today' | '7days' | '30days' | 'all'>('7days');
@@ -55,6 +60,7 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
 
   useEffect(() => {
     setIsAuthenticated(isMetricsAuthenticated());
+    setNeedsSetup(!hasMetricsPassword());
     loadData();
   }, []);
 
@@ -64,23 +70,42 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
     setLastUpdated(new Date());
   };
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!passwordInput.trim()) {
       setLoginError('Por favor, digite a sua senha.');
       return;
     }
 
-    // Aceita tanto a senha salva quanto atalhos como 88548 ou gabriel88548
-    const success = loginMetrics(passwordInput) || 
-      (passwordInput.trim() === '88548' && loginMetrics('gabriel88548'));
+    // Primeiro acesso neste navegador: o próprio dono cria a senha (não existe senha padrão)
+    if (needsSetup) {
+      if (passwordInput.trim() !== passwordConfirm.trim()) {
+        setLoginError('As senhas não coincidem.');
+        return;
+      }
+      const created = await setupMetricsPassword(passwordInput);
+      if (created) {
+        setNeedsSetup(false);
+        setIsAuthenticated(true);
+        setLoginError('');
+        setPasswordInput('');
+        setPasswordConfirm('');
+        loadData();
+      } else {
+        setLoginError(`Use uma senha nova com pelo menos ${getMinPasswordLength()} caracteres.`);
+      }
+      return;
+    }
+
+    const success = await loginMetrics(passwordInput); 
+    // (sem atalhos de senha)
 
     if (success) {
       setIsAuthenticated(true);
       setLoginError('');
       loadData();
     } else {
-      setLoginError('Senha incorreta. Tente "gabriel88548" ou "88548".');
+      setLoginError('Senha incorreta.');
     }
   };
 
@@ -89,13 +114,17 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
     setIsAuthenticated(false);
   };
 
-  const handleChangePassword = (e: React.FormEvent) => {
+  const handleChangePassword = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (newPassword.trim().length < 4) {
-      setPasswordSuccess('A senha deve ter pelo menos 4 caracteres.');
+    if (newPassword.trim().length < getMinPasswordLength()) {
+      setPasswordSuccess(`A senha deve ter pelo menos ${getMinPasswordLength()} caracteres.`);
       return;
     }
-    changeMetricsPassword(newPassword.trim());
+    const changed = await changeMetricsPassword(newPassword.trim());
+    if (!changed) {
+      setPasswordSuccess('Não foi possível salvar. Escolha outra senha.');
+      return;
+    }
     setPasswordSuccess('Senha alterada com sucesso!');
     setTimeout(() => {
       setShowPasswordChange(false);
@@ -193,7 +222,7 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
 
     return {
       totalViews: pageviews.length,
-      uniqueVisitors: Math.max(uniqueSessions, Math.round(pageviews.length * 0.7)),
+      uniqueVisitors: uniqueSessions,
       waLeads: waClicks.length,
       igClicks: igClicks.length,
       phoneClicks: phoneClicks.length,
@@ -253,17 +282,32 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
               <label className="block text-xs font-medium text-gray-300 mb-1.5 uppercase tracking-wider">
-                Senha de Acesso
+                {needsSetup ? 'Crie uma senha de acesso' : 'Senha de Acesso'}
               </label>
               <input 
                 type="password"
                 value={passwordInput}
                 onChange={(e) => setPasswordInput(e.target.value)}
-                placeholder="Digite a senha..."
+                placeholder={needsSetup ? `Mínimo ${getMinPasswordLength()} caracteres...` : 'Digite a senha...'}
                 autoFocus
                 className="w-full px-4 py-3 bg-forest-800/90 border border-gold-500/40 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm"
               />
             </div>
+
+            {needsSetup && (
+              <div>
+                <label className="block text-xs font-medium text-gray-300 mb-1.5 uppercase tracking-wider">
+                  Repita a senha
+                </label>
+                <input
+                  type="password"
+                  value={passwordConfirm}
+                  onChange={(e) => setPasswordConfirm(e.target.value)}
+                  placeholder="Digite a senha novamente..."
+                  className="w-full px-4 py-3 bg-forest-800/90 border border-gold-500/40 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-sm"
+                />
+              </div>
+            )}
 
             {loginError && (
               <p className="text-red-400 text-xs bg-red-950/60 p-2.5 rounded-lg border border-red-800/60">
@@ -276,13 +320,13 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
               className="w-full py-3 bg-gold-500 hover:bg-gold-600 text-forest-900 font-bold rounded-xl transition-all shadow-lg hover:shadow-gold-500/20 text-sm flex items-center justify-center gap-2"
             >
               <ShieldCheck size={18} />
-              Entrar no Painel Privado
+              {needsSetup ? 'Criar senha e entrar' : 'Entrar no Painel Privado'}
             </button>
           </form>
 
           <div className="mt-6 pt-5 border-t border-forest-800 text-center">
             <p className="text-[11px] text-gray-400">
-              💡 Senha padrão pré-configurada: <code className="text-gold-300 font-mono bg-forest-800 px-1.5 py-0.5 rounded">gabriel88548</code> ou <code className="text-gold-300 font-mono bg-forest-800 px-1.5 py-0.5 rounded">88548</code>
+              💡 {needsSetup ? 'Primeiro acesso neste navegador: escolha uma senha. Ela é guardada só como código criptografado (hash).' : 'Esqueceu a senha? Limpe os dados do site neste navegador para criar outra.'}
             </p>
             <button 
               onClick={onClose}
@@ -376,7 +420,7 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
                   ID de Medição: <span className="font-mono text-gold-300 bg-forest-800/80 px-2 py-0.5 rounded border border-gold-500/30">{GA_MEASUREMENT_ID}</span>
                 </h3>
                 <p className="text-xs text-gray-300 mt-1">
-                  Vinculado ao seu e-mail: <strong className="text-white">{GA_EMAIL}</strong>. As visitas do site e dos artigos já estão sendo computadas nos servidores oficiais da Google (100% reais).
+                  Vinculado ao seu e-mail: <strong className="text-white">{GA_EMAIL}</strong>. As visitas e os cliques de contato do site e dos artigos (WhatsApp = evento generate_lead) são enviados ao Google. Para ver o desempenho nas buscas, abra também o <a href="https://search.google.com/search-console" target="_blank" rel="noreferrer" className="underline text-gold-300">Search Console</a>.
                 </p>
               </div>
             </div>
@@ -411,10 +455,10 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
             <div>
               <p className="font-semibold text-emerald-300">
-                Coleta 100% Real Ativa (Sem Dados Simulados)
+                Atenção: os cartões abaixo mostram só este aparelho
               </p>
               <p className="text-gray-300 text-[11px] mt-0.5">
-                Os dados de demonstração iniciais foram completamente eliminados. Cada número exibido abaixo é computado estritamente a partir de acessos e cliques reais em tempo real.
+                Estes números contam apenas as visitas e os cliques feitos neste navegador (ficam salvos nele). Os números de todos os visitantes estão no Google Analytics (WhatsApp = evento generate_lead) e no Search Console (impressões e cliques no Google).
               </p>
             </div>
           </div>
@@ -488,7 +532,7 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
           {/* Visitantes Únicos */}
           <div className="bg-forest-900 border border-forest-800 rounded-2xl p-5 shadow-lg relative overflow-hidden">
             <div className="flex items-center justify-between text-gray-400 mb-2">
-              <span className="text-xs uppercase tracking-wider font-semibold">Visitantes Estimados</span>
+              <span className="text-xs uppercase tracking-wider font-semibold">Sessões neste navegador</span>
               <div className="p-2 bg-forest-800 text-emerald-400 rounded-xl">
                 <Users size={18} />
               </div>
@@ -497,7 +541,7 @@ const AdminMetrics: React.FC<AdminMetricsProps> = ({ onClose }) => {
               {stats.uniqueVisitors}
             </div>
             <p className="text-xs text-gray-400">
-              Usuários únicos na região
+              Contagem aproximada, só deste aparelho
             </p>
             <div className="absolute -right-4 -bottom-4 w-20 h-20 bg-emerald-500/5 rounded-full pointer-events-none"></div>
           </div>
