@@ -1,18 +1,17 @@
 ---
-titulo: "Auxílio-doença negado sem perícia: dá para pedir reanálise?"
-descricao: "Negado só pelos documentos? Desde 06/11/2026 há até 10 dias para pedir uma segunda análise ao INSS. Veja quem pode pedir e como se preparar."
+titulo: "Atestmed negado: dá para pedir reanálise ao INSS?"
+descricao: "Atestmed negado pelo INSS? Desde 06/11/2026 há até 10 dias para pedir uma segunda análise por outro perito. Veja quem pode pedir e como se preparar."
 data: 2026-11-17
 area: previdenciario
-rascunho: true
 ---
 
-A resposta curta: **sim**. Desde **6 de novembro de 2026**, quem teve o auxílio-doença (hoje chamado de **benefício por incapacidade temporária**) negado apenas pela **análise dos documentos médicos**, sem perícia presencial, tem **até 10 dias para pedir uma segunda análise**. O caso é reavaliado por **outro perito**. A regra está na Portaria Conjunta MPS/INSS nº 54, de 5 de novembro de 2026, segundo o Ministério da Previdência Social. Além disso, depois de **duas negativas** nessa análise por documentos, o segurado deve ser encaminhado **obrigatoriamente à perícia presencial**.
+A resposta curta: **sim**. Desde **6 de novembro de 2026**, quem teve o **Atestmed negado**, ou seja, o auxílio-doença (hoje chamado de **benefício por incapacidade temporária**) recusado apenas pela **análise dos documentos médicos**, sem perícia presencial, tem **até 10 dias para pedir uma segunda análise**. O caso é reavaliado por **outro perito**. A regra está na Portaria Conjunta MPS/INSS nº 54, de 5 de novembro de 2026, segundo o Ministério da Previdência Social. Além disso, depois de **duas negativas** nessa análise por documentos, o segurado deve ser encaminhado **obrigatoriamente à perícia presencial**.
 
 > **Importante:** texto informativo, com base nas informações oficiais divulgadas até 17 de novembro de 2026. Os prazos são curtos e cada caso depende dos documentos médicos. Confira sempre a data-limite informada na própria decisão do INSS.
 
 <div style="text-align:center;margin:26px 0"><p style="margin:0 0 10px"><strong>Teve o auxílio-doença negado pelo INSS e está contando os dias?</strong></p><a class="btn" href="https://wa.me/5573982052016?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Li%20o%20artigo%20sobre%20aux%C3%ADlio-doen%C3%A7a%20negado%20e%20rean%C3%A1lise%20no%20seu%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista." target="_blank" rel="noopener" style="padding:14px 30px;font-size:16px">Falar com o especialista no WhatsApp</a></div>
 
-## O que é o Atestmed e por que o pedido pode ser negado sem perícia?
+## O que é o Atestmed e por que o pedido pode ser negado?
 
 O **Atestmed** é a análise do pedido de benefício por incapacidade temporária feita **apenas pelos documentos médicos** enviados pelo segurado, sem perícia presencial de imediato. Desde março de 2026, com o chamado **Novo Atestmed** (Portaria Conjunta MPS/INSS nº 13, de 23 de março de 2026), o benefício concedido por esse caminho pode durar **até 90 dias**. O perito pode fixar um período diferente do indicado pelo médico, desde que fundamente a decisão.
 
@@ -53,7 +52,7 @@ Depois de **duas negativas pelo Atestmed**, o segurado é encaminhado **necessar
 
 Se, mesmo assim, o benefício for negado, ainda há o **recurso administrativo** (prazo de 30 dias contados da ciência da decisão) e a possibilidade de buscar a **Justiça**, onde um perito nomeado pelo juiz faz nova avaliação.
 
-## Atestmed dá direito a prorrogação?
+## O Atestmed permite prorrogação do benefício?
 
 Não. Segundo o INSS, o Atestmed **não prorroga** o benefício apenas com novo atestado, e todo pedido de **prorrogação** passa pela **perícia presencial**. O pedido de prorrogação pode ser feito nos **15 dias** que antecedem o fim do benefício. Também é possível pedir um **novo benefício** com outro atestado, desde que a soma dos afastamentos não passe de **180 dias**.
 

@@ -1,12 +1,11 @@
 ---
-titulo: "Aposentadoria rural para pescador e agricultor: como provar"
-descricao: "Aposentadoria rural aos 60 anos (homem) e 55 (mulher), com 15 anos de atividade. Veja quem é segurado especial, como provar e quais documentos ajudam."
+titulo: "Aposentadoria por idade rural: requisitos e como provar"
+descricao: "Aposentadoria por idade rural: 60 anos (homem) e 55 (mulher), com 15 anos de atividade. Veja os requisitos, quem tem direito e os documentos que ajudam."
 data: 2026-11-17
 area: previdenciario
-rascunho: true
 ---
 
-A resposta curta: o trabalhador rural pode se aposentar por idade com **60 anos, se homem, e 55 anos, se mulher**, desde que comprove **180 meses (15 anos) de atividade rural**. Isso vale, entre outros, para o **segurado especial**: o agricultor familiar e o **pescador artesanal**. O ponto que mais decide o resultado é a **prova da atividade**: sem documentos e sem o cadastro em dia, o pedido costuma ser negado, mesmo para quem trabalhou a vida inteira na roça ou no mar.
+A resposta curta: na **aposentadoria por idade rural**, o trabalhador pode se aposentar com **60 anos, se homem, e 55 anos, se mulher**, desde que comprove **180 meses (15 anos) de atividade rural**. Isso vale, entre outros, para o **segurado especial**: o agricultor familiar e o **pescador artesanal**. O ponto que mais decide o resultado é a **prova da atividade**: sem documentos e sem o cadastro em dia, o pedido costuma ser negado, mesmo para quem trabalhou a vida inteira na roça ou no mar.
 
 > **Importante:** texto informativo, com base na legislação e nas orientações do INSS vigentes em novembro de 2026. Cada caso depende da prova do trabalho rural.
 
@@ -22,7 +21,7 @@ Segundo o INSS, os requisitos são:
 
 A redução de cinco anos na idade vem do art. 48, § 1º, da Lei 8.213/1991, e a carência de 180 meses, do art. 25, II. A atividade rural precisa ser comprovada pelo período da carência (arts. 39 e 48, § 2º).
 
-## Quem é segurado especial?
+## Quem tem direito à aposentadoria por idade rural? Quem é segurado especial?
 
 É a pessoa que **mora no imóvel rural ou em aglomerado próximo** e trabalha **sozinha ou em regime de economia familiar**, ainda que com ajuda eventual de terceiros (Lei 8.213/1991, art. 11, VII). A lei inclui:
 
@@ -59,11 +58,11 @@ O art. 106 da Lei 8.213/1991 lista, entre outros, os seguintes documentos (o rol
 
 Para quem **pesca**, ganham peso os documentos que ligam o nome da pessoa à atividade e à venda do pescado. Quanto mais **antigos e contemporâneos** ao período trabalhado, melhor.
 
-## Quanto o segurado especial recebe?
+## Qual o valor da aposentadoria por idade rural?
 
 O segurado especial tem direito a benefícios de **um salário mínimo** (Lei 8.213/1991, art. 39). Em 2026, o salário mínimo é de **R$ 1.621**.
 
-## Como pedir a aposentadoria rural?
+## Como pedir a aposentadoria por idade rural?
 
 O pedido é feito **à distância**, sem precisar ir à agência, pelo **Meu INSS** (site ou aplicativo) ou pelo telefone **135**, que funciona de segunda a sábado, das 7h às 22h. O INSS pode pedir **complementação** de documentos durante a análise, e é importante responder dentro do prazo indicado.
 
@@ -71,7 +70,7 @@ O pedido é feito **à distância**, sem precisar ir à agência, pelo **Meu INS
 
 Quem não consegue comprovar os 15 anos de atividade rural pode **somar o tempo rural e o urbano**, na chamada **aposentadoria híbrida**. Nesse caso, vale a idade exigida do trabalhador urbano, **sem a redução** de cinco anos.
 
-## O que pode atrapalhar o pedido?
+## Por que a aposentadoria rural é negada?
 
 Alguns fatores costumam gerar negativa:
 

@@ -1,22 +1,21 @@
 ---
-titulo: "BPC/LOAS em 2027: qual será o limite de renda da família?"
-descricao: "O limite do BPC é 1/4 do salário mínimo por pessoa: R$ 405,25 em 2026 e, se o mínimo for R$ 1.741, R$ 435,25 em 2027. Veja como calcular."
+titulo: "BPC/LOAS: quem tem direito e qual o limite de renda?"
+descricao: "BPC/LOAS paga um salário mínimo a idosos (65+) e pessoas com deficiência. Veja quem tem direito e o limite de renda: R$ 405,25 por pessoa em 2026."
 data: 2026-11-17
 area: previdenciario
-rascunho: true
 ---
 
-A resposta curta: pela Lei Orgânica da Assistência Social, o **BPC/LOAS** exige renda familiar **por pessoa** de até **1/4 do salário mínimo**. Em 2026, com o salário mínimo de **R$ 1.621**, esse limite é de **R$ 405,25 por pessoa**. Para 2027, o projeto de orçamento enviado ao Congresso prevê salário mínimo de **R$ 1.741**, o que levaria o limite a **R$ 435,25**. Esse valor, porém, é **estimativa**: só se confirma quando o novo salário mínimo for oficialmente fixado.
+A resposta curta: tem direito ao **BPC/LOAS** o **idoso com 65 anos ou mais** e a **pessoa com deficiência** de família de baixa renda. Pela Lei Orgânica da Assistência Social, a renda familiar **por pessoa** deve ser de até **1/4 do salário mínimo**. Em 2026, com o salário mínimo de **R$ 1.621**, esse limite é de **R$ 405,25 por pessoa**. Para 2027, o projeto de orçamento enviado ao Congresso prevê salário mínimo de **R$ 1.741**, o que levaria o limite a **R$ 435,25**. Esse valor, porém, é **estimativa**: só se confirma quando o novo salário mínimo for oficialmente fixado.
 
 > **Importante:** texto informativo, com base na legislação vigente e nas informações oficiais divulgadas até 17 de novembro de 2026. O valor do salário mínimo de 2027 ainda é uma projeção e pode mudar.
 
 <div style="text-align:center;margin:26px 0"><p style="margin:0 0 10px"><strong>Tem dúvida se a sua família se enquadra no limite de renda do BPC?</strong></p><a class="btn" href="https://wa.me/5573982052016?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Li%20o%20artigo%20sobre%20o%20limite%20de%20renda%20do%20BPC%2FLOAS%20no%20seu%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista." target="_blank" rel="noopener" style="padding:14px 30px;font-size:16px">Falar com o especialista no WhatsApp</a></div>
 
-## O que é o BPC/LOAS?
+## O que é o BPC/LOAS e quem tem direito?
 
 O **Benefício de Prestação Continuada (BPC)** é um benefício assistencial de **um salário mínimo por mês**, previsto no art. 20 da Lei 8.742/1993. Ele é pago ao **idoso com 65 anos ou mais** e à **pessoa com deficiência** que não têm meios de prover a própria manutenção nem de tê-la provida pela família. Não depende de contribuição ao INSS.
 
-## Quanto é o limite de renda em 2026 e em 2027?
+## Qual o limite de renda do BPC/LOAS em 2026 e em 2027?
 
 A lei fixa que a renda familiar mensal **por pessoa** deve ser igual ou inferior a **1/4 do salário mínimo** (art. 20, § 3º). Na prática, o limite acompanha o salário mínimo:
 
@@ -46,7 +45,7 @@ Esses valores são apenas a conta do limite. Quem decide é o INSS, com base nos
 
 A lei prevê exceções. Por exemplo, o **BPC já recebido por outro idoso ou por outra pessoa com deficiência da mesma família** (de até um salário mínimo) **não entra** no cálculo da renda (art. 20, § 14), e esse benefício pode ser concedido a mais de um membro da família (§ 15). Outros valores específicos listados no § 9 também ficam de fora. Por isso, antes de concluir que a renda "passou do limite", vale conferir o que realmente deve ser contado.
 
-## Quais são os outros requisitos?
+## Quais são os requisitos do BPC/LOAS além da renda?
 
 Além da renda, a lei exige:
 
