@@ -3,7 +3,6 @@ titulo: "Queda de energia: dá para cobrar a Coelba na Justiça?"
 descricao: "Queda de energia queimou aparelhos? Veja como pedir ressarcimento à Coelba, prazos, documentos, seus direitos e quando ir à Justiça."
 data: 2026-11-20
 area: consumidor
-rascunho: true
 ---
 
 A resposta curta: **sim, é possível cobrar a distribuidora de energia**, que na maior parte da Bahia é a Coelba. Quando a queda ou a oscilação de energia **queima aparelhos**, a regra é o **ressarcimento**: a distribuidora responde **mesmo sem culpa**, tem **prazos para vistoriar, responder e pagar** e não pode, por exemplo, reduzir o valor por causa da idade do aparelho. Já a **indenização por danos morais** (por ficar muitos dias sem luz, por exemplo) **não é automática** e é discutida na Justiça. O primeiro passo costuma ser o **pedido administrativo**, e há regras importantes para não perder o direito.
