@@ -10,6 +10,8 @@ A resposta curta: **sim, é possível cobrar a distribuidora de energia**, que n
 
 > **Importante:** texto informativo, com base nas normas e decisões citadas na seção Fontes, conferidas em 20 de novembro de 2026. Prazos e regras podem mudar, e cada caso depende das provas. Confira sempre o texto atualizado da norma.
 
+<div style="text-align:center;margin:26px 0"><p style="margin:0 0 10px"><strong>Teve aparelhos queimados por queda de energia e não sabe por onde começar?</strong></p><a class="btn" href="https://wa.me/5573982052016?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Li%20o%20artigo%20sobre%20queda%20de%20energia%20e%20aparelhos%20queimados%20no%20seu%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista." target="_blank" rel="noopener" style="padding:14px 30px;font-size:16px">Falar com o especialista no WhatsApp</a></div>
+
 ## A Coelba é obrigada a pagar por aparelhos queimados?
 
 Em regra, **sim**, quando ficar demonstrado que o dano veio de uma perturbação na rede. Duas normas sustentam isso.
@@ -91,6 +93,8 @@ Outras regras que protegem o consumidor:
 - Pode pedir ressarcimento por **qualquer equipamento alimentado por energia elétrica** conectado à unidade, e **não se pode exigir prova de que o aparelho é seu** (art. 602, § 3º). Aparelho emprestado ou de familiar, por exemplo, não é impedimento.
 - Depois de 90 dias do dano, você **não pode informar a mesma data e horário** de um pedido anterior já deferido (art. 602, § 4º).
 
+<div style="text-align:center;margin:26px 0"><p style="margin:0 0 10px"><strong>Tem dúvida sobre documentos, prazos ou o que fazer antes de consertar o aparelho?</strong></p><a class="btn" href="https://wa.me/5573982052016?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Li%20o%20artigo%20sobre%20queda%20de%20energia%20e%20aparelhos%20queimados%20no%20seu%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista." target="_blank" rel="noopener" style="padding:14px 30px;font-size:16px">Falar com o especialista no WhatsApp</a></div>
+
 ## Posso consertar o aparelho antes da vistoria?
 
 **É melhor esperar**, porque esse é um dos pontos em que mais se perde o direito. Se você consertar o aparelho **antes do pedido** ou **sem esperar o fim do prazo de verificação**, e **não entregar** a nota fiscal do conserto, o laudo, dois orçamentos detalhados e as peças danificadas e substituídas, a distribuidora pode considerar que **não existe ligação entre o dano e a queda de energia** (art. 611, § 3º, II).
@@ -144,6 +148,8 @@ Uma negativa **não encerra a discussão**. Em linhas gerais, o caminho costuma 
 3. **Procurar o Procon**.
 4. **Ajuizar ação** na Justiça, que pode discutir o ressarcimento dos aparelhos e também outros danos.
 
+<div style="text-align:center;margin:26px 0"><p style="margin:0 0 10px"><strong>A Coelba negou, demorou ou pagou menos do que o prejuízo?</strong></p><a class="btn" href="https://wa.me/5573982052016?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Li%20o%20artigo%20sobre%20queda%20de%20energia%20e%20aparelhos%20queimados%20no%20seu%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista." target="_blank" rel="noopener" style="padding:14px 30px;font-size:16px">Falar com o especialista no WhatsApp</a></div>
+
 ## Quem ficou dias sem energia tem direito a indenização?
 
 Aqui é preciso cuidado. Ficar sem energia por muito tempo **pode gerar direito a reparação**, mas a **indenização por danos morais não é presumida em todo caso**.
@@ -155,6 +161,8 @@ Na prática, pesam fatores como a **duração** da interrupção, a **repetiçã
 ## Existe desconto na conta de luz por falta de energia?
 
 Existe, em situações específicas. A ANEEL fixa **limites de duração e de frequência** das interrupções. Segundo o Idec, os indicadores medem apenas paralisações de **3 minutos ou mais**, e, quando os limites são ultrapassados, o consumidor tem direito a **compensação em desconto nas faturas seguintes**, em até 2 meses contados do mês da interrupção. Os indicadores (DIC, FIC e DMIC) aparecem na própria fatura. O valor individual costuma ser pequeno e **não substitui** o ressarcimento dos aparelhos nem eventual indenização.
+
+<div style="text-align:center;margin:26px 0"><p style="margin:0 0 10px"><strong>Quer saber se o seu caso pode ser levado ao Juizado Especial?</strong></p><a class="btn" href="https://wa.me/5573982052016?text=Ol%C3%A1%2C%20Dr.%20Gabriel%21%20Li%20o%20artigo%20sobre%20queda%20de%20energia%20e%20aparelhos%20queimados%20no%20seu%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista." target="_blank" rel="noopener" style="padding:14px 30px;font-size:16px">Falar com o especialista no WhatsApp</a></div>
 
 ## Quando procurar a Justiça?
 
